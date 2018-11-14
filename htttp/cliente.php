@@ -15,15 +15,18 @@
     </head>
     <body>
         <div id="wrapper">
-            <div id="header" class="container">
+        <div id="header" class="container">
                 <div id="logo">
-                <a href="#"><img width="200px" src="assets/img/logo-primopet.png"/></a>
+                    <a href="#"><img width="200px" src="assets/img/logo-primopet.png"/></a>
                 </div>
+                    
                 <div id="menu">
-                        <h2><a href="index.php" accesskey="1" title="">Home</a></h2>
-                        <h2 class="current_page_item"><a href="#" accesskey="2" title="">Sistema</a></h2>
-                        <i class="fas fa-sign-out-alt fa-3x logut iconeVoltar"></i>
+                    <ul class="header">
+                        <li><a href="index.php" accesskey="1" title="">Home</a></li>
+                        <li class="current_page_item"><a href="#" accesskey="2" title="">Sistema</a></li>
+                        <button class="fas fa-sign-out-alt fa-2x logut iconeVoltar"></button>
 
+                    </ul>
                 </div>
             </div>
                 <div class="navbar">
@@ -65,6 +68,24 @@
                            <td>Betim</td>                           
                            <td>MG</td>                           
                            <td>Brasil</td>                           
+                        </tr>
+                        <tr>
+                        <form action="" method="post">
+                           <td class="form-group"><input class="form-control iptCod" id="iptCod" name="iptCod" placeholder="Código"></td> 
+                           <td class="form-group">14/11/2018</td>                                                  
+                           <td class="form-group"><input type='date' class="form-control iptNasc" id="iptNasc" name="iptNasc"></td>                           
+                           <td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome"></td>                           
+                           <td class="form-group"><input class="form-control iptEmail" id="iptEmail" name="iptEmail" placeholder="Email"></td>                           
+                           <td class="form-group"><input class="form-control iptSenha" id="iptSenha" name="iptSenha" placeholder="Senha"></td>                           
+                           <td class="form-group"><input class="form-control iptRg" id="iptRg" name="iptRg" placeholder="RG"></td>                                                  
+                           <td class="form-group"><input class="form-control iptTelefone" id="iptTelefone" name="iptTelefone" placeholder="(31)9999-9999"></td>                           
+                           <td class="form-group"><input class="form-control iptEndereco" id="iptEndereco" name="iptEndereco" placeholder="Endereço"></td>                                                   
+                           <td class="form-group"><input class="form-control iptBairro" id="iptBairro" name="iptBairro" placeholder="Bairro"></td>                                                   
+                           <td class="form-group"><input class="form-control iptCidade" id="iptCidade" name="iptCidade" placeholder="Cidade"></td>                                                                        
+                           <td class="form-group"><input class="form-control iptEstado" id="iptEstado" name="iptEstado" placeholder="Estado"></td>                           
+                           <td class="form-group"><input class="form-control iptPais" id="iptPais" name="iptPais" placeholder="País"></td>    
+                           <td class="iconesEditar"></td>  
+                        </form>                   
                         </tr>
                     </table>
                 </div>

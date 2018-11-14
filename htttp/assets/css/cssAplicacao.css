@@ -338,30 +338,24 @@
 	#menu
 	{
 		position: absolute;
-		top: 2.8em;
+		top: 4.5em;
 		right: 0;
-		display: inline-flex;
-		height: max-content;
-		align-items: center;
 	}
-	
-	#menu h2
+
+	#menu ul
 	{
-		padding: 1em 1.5em;
-		letter-spacing: 1px;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 12pt;
-		color: #2B3F48;
+		display: flex
+	}
+
+	#menu li
+	{
 		display: flex;
+		float: left;
+		margin-top: auto;
+		margin-bottom: auto;
+		text-align: center;
 	}
 
-
-	#menu i
-	{
-		padding: 25px;
-	}
-	
 	#menu li a, #menu li span
 	{
 		padding: 1em 1.5em;
@@ -575,7 +569,7 @@
 
 /* Style the side navigation */
 .navbar {
-	width: 81%;
+	width: 91%;
 	height: 30px;
 	min-height: 10px !important;
     position: fixed;
@@ -622,9 +616,15 @@
     width: 100%;
 }
 
-#styleTable td, #customers th {
+#styleTable td, #customers th{
     border: 1px solid #ddd;
-    padding: 8px;
+	padding: 8px;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+#styleTable input{
+	font-size: 1em;
 }
 
 #styleTable tr:nth-child(even){background-color: #f2f2f2;}
@@ -639,19 +639,32 @@
     color: white;
     border-style: solid;
     border-width: 1px;
-    border-color: #89D265;
+	border-color: #89D265;
+	font-size: 1em;
     
 }
 
+
 .tamanhoTabela{
-    width: 81%;
+	width: auto;
     display: flex; 
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 4.5%;
+    margin-right: 2%;
 }
 
 .logout{
 	display: flex;
 	margin-top: auto;
 	margin-bottom: auto;
+}
+
+.iconeVoltar{
+	margin-left: 10px;
+	background: transparent;
+	border-style: none;
+	color: #89D265;
+}
+
+.iconesEditar{
+	width: 2.6%;
 }
