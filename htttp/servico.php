@@ -8,42 +8,79 @@
         <meta name="description" content="" />
 
         <link href="assets/css/cssAplicacao.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="assets/libs/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
 
     </head>
     <body>
         <div id="wrapper">
-            <div id="header" class="container">
+        <div id="header" class="container">
                 <div id="logo">
-                    <h1><a href="#">PRIMO PET</a></h1>
+                    <a href="#"><img width="200px" src="assets/img/logo-primopet.png"/></a>
                 </div>
+                    
                 <div id="menu">
-                    <ul>
-                        <li class="current_page_item"><a href="index.php" accesskey="1" title="">Home</a></li>
-                        <li><a href="cliente.php" accesskey="2" title="">Clientes</a></li>
-                        <li><a href="funcionario.php" accesskey="3" title="">Funcionário</a></li>
-                        <li><a href="animais.php" accesskey="4" title="">Animais</a></li>
-                        <li><a href="servico.php" accesskey="5" title="">Serviços</a></li>
-                        
+                    <ul class="header">
+                        <li><a href="index.php" accesskey="1" title="">Home</a></li>
+                        <li class="current_page_item"><a href="#" accesskey="2" title="">Sistema</a></li>
+                        <button class="fas fa-sign-out-alt fa-2x logut iconeVoltar"></button>
+
                     </ul>
                 </div>
-                <br/><br/><br/>
-                <div>
-                    <form>
-                        
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email </label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Preencha seu email">
-                            
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                        </div>                                                                                                
-                        
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    </form>
-                </div>
             </div>
+                <div class="navbar">
+                    <button onclick="location.href='cliente.php';">Cliente</a>
+                    <button onclick="location.href='funcionario.php';">Funcionario</a>
+                    <button onclick="location.href='pets.php';">Pets</a>
+                    <button class="ativo">Serviço</a>
+                </div>
+                <div class="tamanhoTabela">                  
+                    <table class="tab-content" id="styleTable">
+                    <thead>
+                        <tr class="verde2">
+                            <th>Cod Serviço</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Data Prevista</th>
+                            <th>Hora Prevista</th>
+                            <th>Obs. Agendamento</th>
+                            <th>Cod Veterinário</th>
+                            <th>Data Execução</th>
+                            <th>Hora Execução</th>
+                            <th>Obs. Execução</th>                                                                            
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>SER001</td> 
+                        <td>Tosa</td>                                                  
+                        <td>Cortar o pelo</td>                           
+                        <td>R$20,00</td>                           
+                        <td>15/11/2018</td>
+                        <td>14:00</td>
+                        <td>Deixar pelo curto</td>            
+                        <td>FUNC001</td>
+                        <td>15/11/2018</td>
+                        <td>14:00</td>
+                        <td>Precisou ser dopado</td>                                                 
+                    </tr>
+                    <tr>
+                        <form action="" method="post">
+                           <td class="form-group"><input class="form-control iptCod" id="iptCod" name="iptCod" placeholder="Código"></td>                   
+                           <td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome"></td>                           
+                           <td class="form-group"><input class="form-control iptDesc" id="iptDesc" name="iptDesc" placeholder="Decrição"></td>                           
+                           <td class="form-group"><input class="form-control iptVal" id="iptVal" name="iptVal" placeholder="Valor"></td>                           
+                           <td class="form-group"><input class="form-control iptDataPrev" id="iptDataPrev" name="iptDataPrev" placeholder="Data Prevista"></td>                                                  
+                           <td class="form-group"><input class="form-control iptHoraPrev" id="iptHoraPrev" name="iptHoraPrev" placeholder="Hora Prevista"></td>                           
+                           <td class="form-group"><input class="form-control iptObsA" id="iptObsA" name="iptObsA" placeholder="Observação Agendamento"></td>                                                   
+                           <td class="form-group"><input class="form-control iptCodVet" id="iptCodVet" name="iptCodVet" placeholder="Código Vet."></td>                                                   
+                           <td class="form-group"><input class="form-control iptDataExec" id="iptDataExec" name="iptDataExec" placeholder="Data Execução"></td>                                                                        
+                           <td class="form-group"><input class="form-control iptHoraExec" id="iptHoraExec" name="iptHoraExec" placeholder="Hora Execução"></td>                           
+                           <td class="form-group"><input class="form-control iptObsE" id="iptObsE" name="iptObsE" placeholder="Observação Execução"></td>    
+                           <td class="iconesEditar"></td>  
+                        </form>                   
+                        </tr>
+                    </table>
+                </div>
             </body>

@@ -30,45 +30,44 @@
                 </div>
             </div>
                 <div class="navbar">
-                    <button class="ativo">Cliente</a>
-                    <button>Funcionario</a>
-                    <button>Pets</a>
-                    <button>Serviço</a>
+                    <button class="ativo">Cliente</button>
+                    <button onclick="location.href='funcionario.php';">Funcionario</button>
+                    <button onclick="location.href='pets.php';">Pets</button>
+                    <button onclick="location.href='servico.php';">Serviço</button>
                 </div>
                 <div class="tamanhoTabela">                  
                     <table class="tab-content" id="styleTable">
-                        <thead>
-                            <tr class="verde2">
-                                <th>Codígo</th>
-                                <th>Data Cadastro</th>
-                                <th>Data Nasc</th>
-                                <th>Nome</th>
-                                <th>Email</th>
-                                <th>Senha</th>
-                                <th>RG</th>
-                                <th>Telefone</th>
-                                <th>Endereço</th>
-                                <th>Bairro</th>
-                                <th>Cidade</th>
-                                <th>Estado</th>
-                                <th>País</th>                                
-                            </tr>
-                        </thead>
-                        <tr>
-                           <td>FUNC001</td> 
-                           <td>07/11/2018</td>                                                  
-                           <td>11/12/1984</td>                           
-                           <td>Michelle Belli</td>                           
-                           <td>michellebf@gmail.com</td>                           
-                           <td>12Mm123</td>                           
-                           <td>MG9.999.999</td>                                                  
-                           <td>(31)9999-9999</td>                                                   
-                           <td>Av. Da casa Dela, 344</td>                                                   
-                           <td>Centro</td>                                                                        
-                           <td>Betim</td>                           
-                           <td>MG</td>                           
-                           <td>Brasil</td>                           
+                    <thead>
+                        <tr class="verde2">
+                            <th>Codígo</th>
+                            <th>Data Cadastro</th>
+                            <th>Data Nasc</th>
+                            <th>Nome</th>
+                            <th>Email</th>                                                 
+                            <th>RG</th>
+                            <th>Telefone</th>
+                            <th>Endereço</th>
+                            <th>Bairro</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                            <th>País</th>                                
                         </tr>
+                    </thead>
+                    
+                    <tr>
+                        <td>CLIC001</td> 
+                        <td>07/11/2018</td>                                                  
+                        <td>01/01/2000</td>                           
+                        <td>Ronie Lima</td>                           
+                        <td>ronie@gmail.com</td>                                                                                                 
+                        <td>MG8.888.888</td>                                                  
+                        <td>(31)8999-9999</td>                                                   
+                        <td>Av. Da casa Dele, 355</td>                                                   
+                        <td>Centro</td>                                                                        
+                        <td>Betim</td>                           
+                        <td>MG</td>                           
+                        <td>Brasil</td>                           
+                    </tr>
                         <tr>
                         <form action="" method="post">
                            <td class="form-group"><input class="form-control iptCod" id="iptCod" name="iptCod" placeholder="Código"></td> 
@@ -76,7 +75,6 @@
                            <td class="form-group"><input type='date' class="form-control iptNasc" id="iptNasc" name="iptNasc"></td>                           
                            <td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome"></td>                           
                            <td class="form-group"><input class="form-control iptEmail" id="iptEmail" name="iptEmail" placeholder="Email"></td>                           
-                           <td class="form-group"><input class="form-control iptSenha" id="iptSenha" name="iptSenha" placeholder="Senha"></td>                           
                            <td class="form-group"><input class="form-control iptRg" id="iptRg" name="iptRg" placeholder="RG"></td>                                                  
                            <td class="form-group"><input class="form-control iptTelefone" id="iptTelefone" name="iptTelefone" placeholder="(31)9999-9999"></td>                           
                            <td class="form-group"><input class="form-control iptEndereco" id="iptEndereco" name="iptEndereco" placeholder="Endereço"></td>                                                   
