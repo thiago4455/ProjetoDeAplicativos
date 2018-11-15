@@ -666,5 +666,23 @@
 }
 
 .iconesEditar{
-	width: 2.6%;
+	width: 2.7%;
+	flex-direction: row;
+}
+
+.btnEdit{
+	background: transparent;
+	border-style: none;
+	padding: 0;
+}
+
+.btnDel{
+	background: transparent;
+	border-style: none;
+	margin-top: 10px;
+	padding: 2px;
+}
+
+.btnEdit:hover, .btnDel:hover{
+	color: #89D265;
 }

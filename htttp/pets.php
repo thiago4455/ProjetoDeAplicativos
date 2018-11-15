@@ -75,7 +75,7 @@
                            <td class="form-group"><input class="form-control iptGenero" id="iptGenero" name="iptGenero" placeholder="Gênero"></td>                                                   
                            <td class="form-group"><input class="form-control iptVacina" id="iptVacina" name="iptVacina" placeholder="Vacinação"></td>                                                   
                            <td class="form-group"><input class="form-control iptComportamento" id="iptComportamento" name="iptComportamento" placeholder="Comportamento"></td>
-                           <td class="iconesEditar"></td>  
+                           <td class="iconesEditar"><button class="fas fa-pen btnEdit"><button class="fas fa-trash btnDel"></td>  
                         </form>                   
                         </tr>
                     </table>

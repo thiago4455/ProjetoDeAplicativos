@@ -82,7 +82,7 @@
                            <td class="form-group"><input class="form-control iptCidade" id="iptCidade" name="iptCidade" placeholder="Cidade"></td>                                                                        
                            <td class="form-group"><input class="form-control iptEstado" id="iptEstado" name="iptEstado" placeholder="Estado"></td>                           
                            <td class="form-group"><input class="form-control iptPais" id="iptPais" name="iptPais" placeholder="País"></td>    
-                           <td class="iconesEditar"></td>  
+                           <td class="iconesEditar"><button class="fas fa-pen btnEdit"><button class="fas fa-trash btnDel"></td>  
                         </form>                   
                         </tr>
                     </table>

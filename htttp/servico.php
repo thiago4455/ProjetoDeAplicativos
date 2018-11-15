@@ -78,7 +78,7 @@
                            <td class="form-group"><input class="form-control iptDataExec" id="iptDataExec" name="iptDataExec" placeholder="Data Execução"></td>                                                                        
                            <td class="form-group"><input class="form-control iptHoraExec" id="iptHoraExec" name="iptHoraExec" placeholder="Hora Execução"></td>                           
                            <td class="form-group"><input class="form-control iptObsE" id="iptObsE" name="iptObsE" placeholder="Observação Execução"></td>    
-                           <td class="iconesEditar"></td>  
+                           <td class="iconesEditar"><button class="fas fa-pen btnEdit"><button class="fas fa-trash btnDel"></td>  
                         </form>                   
                         </tr>
                     </table>
