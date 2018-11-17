@@ -97,10 +97,26 @@ function  retData(){
                             $clientes[$i]->setBairro($tableclientes[$i]['bairro']);
 
                             echo '<!--'.$clientes[$i]->getCod().'_START-->';
-                            echo $i % 2 == 0?  '<tr id="COD'.$i.'">': '<tr class="even" id="COD'.$i.'">';
+                            echo $i % 2 == 0?  '<tr id="'.$clientes[$i]->getCod() .'">': '<tr class="even" id="COD'.$i.'">';
                             echo '<form action="" method="post">';
                                 echo '<td>'.$clientes[$i]->getCod() .'</td>';
                                 echo '<td>'.$clientes[$i]->getDataCad().'</td>';
+                                if (isset($_POST['edit'.$i])) {
+                                    echo '<td class="form-group"><input type="date" class="form-control iptNasc" id="iptNasc" max="'.retData().'" name="iptNasc" value="'.str_replace('/','-',$clientes[$i]->getDataNasc()).'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome" value="'.$clientes[$i]->getNome().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptEmail" id="iptEmail" name="iptEmail" placeholder="Email" value="'.$clientes[$i]->getEmail().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptRg" id="iptRg" name="iptRg" placeholder="RG" value="'.$clientes[$i]->getRg().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptTelefone" id="iptTelefone" name="iptTelefone" placeholder="(31)9999-9999" value="'.$clientes[$i]->getTelefone().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptEndereco" id="iptEndereco" name="iptEndereco" placeholder="Endereço" value="'.$clientes[$i]->getEndereco().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptBairro" id="iptBairro" name="iptBairro" placeholder="Bairro" value="'.$clientes[$i]->getBairro().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptCidade" id="iptCidade" name="iptCidade" placeholder="Cidade" value="'.$clientes[$i]->getCidade().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptEstado" id="iptEstado" name="iptEstado" placeholder="Estado" value="'.$clientes[$i]->getEstado().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptPais" id="iptPais" name="iptPais" placeholder="País" value="'.$clientes[$i]->getPais().'"></td>';
+                                    echo '<input type="hidden" name="codCliente" value="'.$i .'">';
+                                    echo '<input type="hidden" name="codEdit" value="'.$clientes[$i]->getCod().'">';
+                                    echo '<td class="iconesInserir"><button type="submit" value="submit request" class="fas fa-check btnIns" name="confirmEdit"></td>';
+                                }
+                                else{
                                 echo '<td>'.$clientes[$i]->getDataNasc().'</td>';
                                 echo '<td>'.$clientes[$i]->getNome().'</td>';
                                 echo '<td>'.$clientes[$i]->getEmail().'</td>';
@@ -112,7 +128,9 @@ function  retData(){
                                 echo '<td>'.$clientes[$i]->getEstado().'</td>';
                                 echo '<td>'.$clientes[$i]->getPais().'</td>';
                                 echo '<input type="hidden" name="codCliente" value="'.$clientes[$i]->getCod() .'">';
-                                echo '<td class="iconesEditar"><button class="fas fa-pen btnEdit" name="edit"><button class="fas fa-trash btnDel" name="delete"></td>';
+                                echo '<input type="hidden" name="codEdit" value="'.$clientes[$i]->getCod().'">';
+                                echo '<td class="iconesEditar"><button class="fas fa-pen btnEdit"  name="edit'.$i.'"><button class="fas fa-trash btnDel" name="delete"></td>';
+                                }
                                 echo '<!--EDIT-->';
                                 echo '<!--EDIT_END-->';
                             echo '</form>';
@@ -133,7 +151,7 @@ function  retData(){
                         <form action="" method="post">
                            <td class="form-group"><?php $objCliente = new ClienteClass(); echo $objCliente->retProxCodCliente(); ?></td> 
                            <td class="form-group"><?php echo retData(); ?></td>                                                  
-                           <td class="form-group"><input type='date' class="form-control iptNasc" id="iptNasc" name="iptNasc"></td>                           
+                           <td class="form-group"><input type='date' max="<?php echo retData(); ?>" class="form-control iptNasc" id="iptNasc" name="iptNasc"></td>                           
                            <td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome"></td>                           
                            <td class="form-group"><input class="form-control iptEmail" id="iptEmail" name="iptEmail" placeholder="Email"></td>                           
                            <td class="form-group"><input class="form-control iptRg" id="iptRg" name="iptRg" placeholder="RG"></td>                                                  
@@ -143,7 +161,7 @@ function  retData(){
                            <td class="form-group"><input class="form-control iptCidade" id="iptCidade" name="iptCidade" placeholder="Cidade"></td>                                                                        
                            <td class="form-group"><input class="form-control iptEstado" id="iptEstado" name="iptEstado" placeholder="Estado"></td>                           
                            <td class="form-group"><input class="form-control iptPais" id="iptPais" name="iptPais" placeholder="País"></td>    
-                           <td class="iconesInserir"><button type='submit' value='submit request' class="fas fa-check btnIns" name="inserir"></td>
+                           <td class="iconesInserir"><button type="submit" value="submit request" class="fas fa-check btnIns" name="inserir"></td>
                         </form>
                         </tr>
                     </table>
@@ -175,6 +193,34 @@ function  retData(){
                         $objCliente->setPais($_POST['iptPais']);
 
                         $objCliente->inserirCliente($objCliente);
+                        echo '<meta http-equiv="refresh" content="0">';
+                        }
+                    }
+
+                   
+                    if (isset($_POST['confirmEdit'])) {
+
+                        if(($_POST['iptNome']=='') || ($_POST['iptNasc']=='') || ($_POST['iptEmail']=='') || ($_POST['iptRg']=='') || ($_POST['iptTelefone']=='') || ($_POST['iptEndereco']=='') || ($_POST['iptBairro']=='') || ($_POST['iptEstado']=='') || ($_POST['iptCidade']=='') || ($_POST['iptPais']=='')){
+                            echo 'ERRO';
+                        }
+                        else{
+                        $objCliente = new ClienteClass();
+                        $codNovo = $_POST['codEdit'];
+
+                        $objCliente->setCod($codNovo);
+                        $objCliente->setDataCad(retData());
+                        $objCliente->setDataNasc(str_replace('-','/',$_POST['iptNasc']));
+                        $objCliente->setNome($_POST['iptNome']);
+                        $objCliente->setEmail($_POST['iptEmail']);
+                        $objCliente->setRg($_POST['iptRg']);
+                        $objCliente->setTelefone($_POST['iptTelefone']);
+                        $objCliente->setEndereco($_POST['iptEndereco']);
+                        $objCliente->setBairro($_POST['iptBairro']);
+                        $objCliente->setCidade($_POST['iptCidade']);
+                        $objCliente->setEstado($_POST['iptEstado']);
+                        $objCliente->setPais($_POST['iptPais']);
+
+                        $objCliente->editarCliente($objCliente);
                         echo '<meta http-equiv="refresh" content="0">';
                         }
                     }

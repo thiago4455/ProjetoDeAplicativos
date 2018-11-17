@@ -145,7 +145,7 @@ class ClienteClass {
 
         return true;
     }
-    
+            
     public function editarCliente($objCliente) {
         require_once('class/ConexaoClass.php');
         $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");   
@@ -164,7 +164,7 @@ class ClienteClass {
         $estado = $objCliente->getEstado();
         $pais = $objCliente->getPais();
         
-        $objConexao->exercutarComandoSQL("UPDATE Cliente SET (codCliente='$codCliente', dataCadastro='$dataCad', dataNascimento='$dataNasc', nome='$nome', rg='$rg', telefone='$telefone', senha='$senha', endereco='$endereco', cidade='$cidade', bairro='$bairro', estado='$estado', pais='$pais')  WHERE codCliente='$codCliente'");               
+        $objConexao->exercutarComandoSQL("UPDATE Cliente SET codCliente='$codCliente', dataCadastro='$dataCad', dataNascimento='$dataNasc', nome='$nome', rg='$rg', telefone='$telefone', senha='$senha', endereco='$endereco', cidade='$cidade', bairro='$bairro', estado='$estado', pais='$pais'  WHERE codCliente='$codCliente'");               
 
         return true;
     }
