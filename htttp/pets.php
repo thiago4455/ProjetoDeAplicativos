@@ -1,5 +1,12 @@
 <!DOCTYPE>
+<?php
+// Start the session
+session_start();
 
+if ($_SESSION["userId"] == "") {
+    header('Location: login.php');
+}
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,14 +31,18 @@
                     <ul class="header">
                         <li><a href="index.php" accesskey="1" title="">Home</a></li>
                         <li class="current_page_item"><a href="#" accesskey="2" title="">Sistema</a></li>
-                        <button class="fas fa-sign-out-alt fa-2x logut iconeVoltar"></button>
+                        <button class="fas fa-sign-out-alt fa-2x logut iconeVoltar" onclick="window.location.href='login.php'"></button>
 
                     </ul>
                 </div>
             </div>
                 <div class="navbar">
                     <button onclick="location.href='cliente.php';">Cliente</button>
-                    <button onclick="location.href='funcionario.php';">Funcionario</button>
+                    <?php 
+                    if ($_SESSION["userType"] == "1") {
+                        echo '<button onclick="location.href='."'funcionario.php'".';">Funcionario</button>';
+                    }
+                    ?>
                     <button class="ativo">Pets</button>
                     <button onclick="location.href='servico.php';">Serviço</button>
                 </div>
@@ -75,7 +86,7 @@
                            <td class="form-group"><input class="form-control iptGenero" id="iptGenero" name="iptGenero" placeholder="Gênero"></td>                                                   
                            <td class="form-group"><input class="form-control iptVacina" id="iptVacina" name="iptVacina" placeholder="Vacinação"></td>                                                   
                            <td class="form-group"><input class="form-control iptComportamento" id="iptComportamento" name="iptComportamento" placeholder="Comportamento"></td>
-                           <td class="iconesEditar"><button class="fas fa-pen btnEdit"><button class="fas fa-trash btnDel"></td>  
+                           <td class="iconesInserir"><button class="fas fa-pen btnEdit"><button class="fas fa-trash btnDel"></td>  
                         </form>                   
                         </tr>
                     </table>

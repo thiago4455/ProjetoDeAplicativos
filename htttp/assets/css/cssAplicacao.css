@@ -627,7 +627,7 @@
 	font-size: 1em;
 }
 
-#styleTable tr:nth-child(even){background-color: #f2f2f2;}
+.even{background-color: #f2f2f2;}
 
 #styleTable tr:hover {background-color: #ddd;}
 
@@ -667,13 +667,29 @@
 
 .iconesEditar{
 	width: 2.7%;
+	display: none;
+}
+
+iconesInserir{
+	width: 2.7%;
 	flex-direction: row;
 }
+
+.show{
+	display: table-cell;
+}
+ 
 
 .btnEdit{
 	background: transparent;
 	border-style: none;
 	padding: 0;
+}
+
+.btnIns{
+	background: transparent;
+	border-style: none;
+	padding: 3px;
 }
 
 .btnDel{
@@ -683,6 +699,6 @@
 	padding: 2px;
 }
 
-.btnEdit:hover, .btnDel:hover{
+.btnEdit:hover, .btnDel:hover, .btnIns:hover{
 	color: #89D265;
 }

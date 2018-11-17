@@ -1,5 +1,12 @@
 <!DOCTYPE>
+<?php
+// Start the session
+session_start();
 
+
+$_SESSION["userId"] = "";
+$_SESSION["userType"] = "";
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,7 +23,7 @@
         <div id="wrapper">
             <div id="header" class="container">
                 <div id="logo">
-                <a href="#"><img width="200px" src="assets/img/logo-primopet.png"/></a>
+                <a href="./"><img width="200px" src="assets/img/logo-primopet.png"/></a>
                 </div>
                 <div id="menu">
                     <ul>
@@ -27,24 +34,49 @@
                 </div>
                 <br/><br/><br/>
                 <div class='alinharCentro'>
-                    <form class="formLogin">
+                    <form action="" method="post" class="formLogin">
                         
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Usuário </label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuário">
+                            <label for="exampleInputEmail1">Email </label>
+                            <input type="email" class="form-control" id="email" name='email' aria-describedby="emailHelp" placeholder="Email">
                             
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                            <input type="password" class="form-control" id="passwd" name='passwd' placeholder="Senha">
                         </div>                                                                                                
                         
-                        <button type="submit" class="btn btn-primary verde">Logar</button>
+                        <button type="submit" class="btn btn-primary verde" name='enviar'>Logar</button>
 
                          
                          <div>
                             <p>Esqueceu sua senha? Recupere já <a href='recuperarSenha.php'>clicando aqui</a> </p>
                         </div>
+
+            <?php 
+                require_once('class/FuncionarioClass.php');
+                $objFunc = new FuncionarioClass();
+
+                if (isset($_POST['enviar'])) {
+                    $tablefuncs = $objFunc->retFuncionarios();
+
+                    $max = sizeof($tablefuncs);
+
+                    echo '<hr/>';
+                    for ($i = 0; $i < $max; $i++) {
+                        if(($_POST['email'] == $tablefuncs[$i]["email"]) && ($_POST['passwd'] == $tablefuncs[$i]["senha"])){
+                            $_SESSION["userId"] = $tablefuncs[$i]["codFuncionario"];
+                            $_SESSION["userType"] = $tablefuncs[$i]["codTipo"];
+                            header('Location: index.php');
+                        }
+                        else{
+                            $_SESSION["userId"] = "";
+                            $_SESSION["userType"] = "";
+                        }
+                    }
+                    echo   'Usuário / Senha incorretos';
+                }
+                ?>                    
 
                     </form>
                 </div>

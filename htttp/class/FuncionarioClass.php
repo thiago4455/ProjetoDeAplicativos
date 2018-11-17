@@ -16,6 +16,7 @@ class FuncionarioClass {
     private $cidade;
     private $estado;
     private $pais;
+    private $codTipo;
 
     //-- Encapsulamento das propriedades (Método GET e SET)
     function getCod() {
@@ -70,6 +71,9 @@ class FuncionarioClass {
         return $this->bairro;
     }
 
+    function getTipo() {
+        return $this->codTipo;
+    }
 
 
     function setCod($codFunc) {
@@ -124,11 +128,15 @@ class FuncionarioClass {
         $this->bairro = $bairro;
     }
 
+    function setTipo() {
+        $this->codTipo = $codTipo;
+    }
+
             //-------------- CRUD-----------------------
     public function retFuncionarios() {
         require_once('class/ConexaoClass.php');
-        $objConexao = new ConexaoClass("localhost", "root", "", "dbPhpBancoDados");
-        $tableFuncs = $objConexao->selecionarDados("SELECT * FROM Professor");
+        $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");
+        $tableFuncs = $objConexao->selecionarDados("SELECT * FROM Funcionario");
 
         return $tableFuncs;
     }
@@ -150,9 +158,10 @@ class FuncionarioClass {
         $cidade = $objFunc->getCidade();
         $estado = $objFunc->getEstado();
         $pais = $objFunc->getPais();
+        $codTipo = $objFunc->getTipo();
         
         
-        $objConexao->exercutarComandoSQL("INSERT INTO Funcionario (email,senha) VALUES ('$email','$senha')");               
+        $objConexao->exercutarComandoSQL("INSERT INTO Funcionario (codFuncionario, dataCadastro, dataNascimento, nome, rg, telefone, email, senha, endereco, cidade, bairro, estado, pais, codTipo) VALUES ('$codFunc', '$dataCad', '$dataNasc', '$nome', '$rg', '$telefone', '$email', '$senha', '$endereco', '$cidade', '$bairro', '$estado', '$pais', '$codTipo')");               
 
         return true;
     }
@@ -175,7 +184,7 @@ class FuncionarioClass {
         $estado = $objFunc->getEstado();
         $pais = $objFunc->getPais();
         
-        $objConexao->exercutarComandoSQL("UPDATE Funcionario SET  WHERE codFuncionario='$codFunc'");               
+        $objConexao->exercutarComandoSQL("UPDATE Funcionario SET (codFuncionario='$codFunc', dataCadastro='$dataCad', dataNascimento='$dataNasc', nome='$nome', rg='$rg', telefone='$telefone', email='$email', senha='$senha', endereco='$endereco', cidade='$cidade', bairro='$bairro', estado='$estado', pais='$pais', codTipo='$codTipo')  WHERE codFuncionario='$codFunc'");               
 
         return true;
     }

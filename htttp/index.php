@@ -1,12 +1,15 @@
 <!DOCTYPE>
-
+<?php
+// Start the session
+session_start();
+?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title></title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="assets/css/cssAplicacao.css" rel="stylesheet" type="text/css"/>
         <link href="assets/libs/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
@@ -20,11 +23,19 @@
                 </div>
                     
                 <div id="menu">
-                    <ul>
-                        <li class="current_page_item"><a href="index.php" accesskey="1" title="">Home</a></li>
-                        <li><a href="cliente.php" accesskey="2" title="">Sistema</a></li>
-                        <li><a href="login.php" accesskey="2" title="">Login</a></li>
-
+                    <ul class="header">
+                    <?php 
+                    if ($_SESSION["userId"] != "") {
+                        echo '<li class="current_page_item"><a href="index.php" accesskey="1" title="">Home</a></li>';
+                        echo '<li><a href="cliente.php" accesskey="2" title="">Sistema</a></li>';
+                        echo '<button class="fas fa-sign-out-alt fa-2x logut iconeVoltar" onclick="window.location.href='."'login.php'".'"></button>';
+                    }
+                    else{
+                        echo '<li class="current_page_item"><a href="index.php" accesskey="1" title="">Home</a></li>';
+                        echo '<li><a href="login.php" accesskey="2" title="">Login</a></li>';
+                    }
+                    
+                    ?>
                     </ul>
                 </div>
             </div>
