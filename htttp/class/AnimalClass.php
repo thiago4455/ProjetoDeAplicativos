@@ -5,13 +5,13 @@ class AnimalClass {
     private $codAnimal;
     private $Cliente_codCliente;
     private $nome;
-    private $anoNasc;
+    private $anoNascimento;
     private $peso;
     private $grupo;
     private $raca;
     private $genero;
-    private $vacin;
-    private $comp;
+    private $vacinacao;
+    private $comportamento;
 
     //-- Encapsulamento das propriedades (Método GET e SET)
     function getCodAnimal() {
@@ -46,11 +46,11 @@ class AnimalClass {
         return $this->genero;
     }
 
-    function getVacin() {
+    function getVacinacao() {
         return $this->vacinacao;
     }
 
-    function getComp() {
+    function getComportamento() {
         return $this->comportamento;
     }
 

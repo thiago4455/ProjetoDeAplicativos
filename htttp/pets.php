@@ -87,78 +87,149 @@ if ($_SESSION["userId"] == "") {
 
                                 for ($i = 0; $i < $max; $i++) {
                                     $animais[$i] = new AnimalClass();
-                                    $animais[$i]->setCod($tableclientes[$i]['codCliente']);
-                                    $animais[$i]->setDataCad($tableclientes[$i]['dataCadastro']);
-                                    //PAROU AQUI
-                                    $animais[$i]->setDataNasc($tableclientes[$i]['dataNascimento']);
-                                    $animais[$i]->setNome($tableclientes[$i]['nome']);
-                                    $animais[$i]->setEmail($tableclientes[$i]['email']);
-                                    $animais[$i]->setRg($tableclientes[$i]['rg']);
-                                    $animais[$i]->setTelefone($tableclientes[$i]['telefone']);
-                                    $animais[$i]->setEndereco($tableclientes[$i]['endereco']);
-                                    $animais[$i]->setCidade($tableclientes[$i]['cidade']);
-                                    $animais[$i]->setEstado($tableclientes[$i]['estado']);
-                                    $animais[$i]->setPais($tableclientes[$i]['pais']);
-                                    $animais[$i]->setBairro($tableclientes[$i]['bairro']);
+                                    $animais[$i]->setCodAnimal($tableAnimal[$i]['codAnimal']);
+                                    $animais[$i]->setCliente_CodCliente($tableAnimal[$i]['Cliente_CodCliente']);
+                                    //PAROU AQUI                                    
+                                    $animais[$i]->setNome($tableAnimal[$i]['nome']);
+                                    $animais[$i]->setAnoNascimento($tableAnimal[$i]['anoNascimento']);
+                                    $animais[$i]->setPeso($tableAnimal[$i]['peso']);
+                                    $animais[$i]->setGrupo($tableAnimal[$i]['grupo']);
+                                    $animais[$i]->setRaca($tableAnimal[$i]['raca']);
+                                    $animais[$i]->setGenero($tableAnimal[$i]['genero']);
+                                    $animais[$i]->setVacinacao($tableAnimal[$i]['vacinacao']);
+                                    $animais[$i]->setComportamento($tableAnimal[$i]['comportamento']);                                   
 
-                                    echo '<!--'.$clientes[$i]->getCod().'_START-->';
-                                    echo $i % 2 == 0?  '<tr id="'.$clientes[$i]->getCod() .'">': '<tr class="even" id="COD'.$i.'">';
+                                    echo '<!--'.$animais[$i]->getCod().'_START-->';
+                                    echo $i % 2 == 0?  '<tr id="'.$animais[$i]->getCod() .'">': '<tr class="even" id="COD'.$i.'">';
                                     echo '<form action="" method="post">';
-                                        echo '<td>'.$clientes[$i]->getCod() .'</td>';
-                                        echo '<td>'.$clientes[$i]->getDataCad().'</td>';
+                                        echo '<td>'.$animais[$i]->getCodAnimal() .'</td>';
+                                        //echo '<td>'.$animais[$i]->getDataCad().'</td>';
                                         if (isset($_POST['edit'.$i])) {
-                                            echo '<td class="form-group"><input type="date" class="form-control iptNasc" id="iptNasc" max="'.retData().'" name="iptNasc" value="'.str_replace('/','-',$clientes[$i]->getDataNasc()).'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome" value="'.$clientes[$i]->getNome().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptEmail" id="iptEmail" name="iptEmail" placeholder="Email" value="'.$clientes[$i]->getEmail().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptRg" id="iptRg" name="iptRg" placeholder="RG" value="'.$clientes[$i]->getRg().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptTelefone" id="iptTelefone" name="iptTelefone" placeholder="(31)9999-9999" value="'.$clientes[$i]->getTelefone().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptEndereco" id="iptEndereco" name="iptEndereco" placeholder="Endereço" value="'.$clientes[$i]->getEndereco().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptBairro" id="iptBairro" name="iptBairro" placeholder="Bairro" value="'.$clientes[$i]->getBairro().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptCidade" id="iptCidade" name="iptCidade" placeholder="Cidade" value="'.$clientes[$i]->getCidade().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptEstado" id="iptEstado" name="iptEstado" placeholder="Estado" value="'.$clientes[$i]->getEstado().'"></td>';
-                                            echo '<td class="form-group"><input class="form-control iptPais" id="iptPais" name="iptPais" placeholder="País" value="'.$clientes[$i]->getPais().'"></td>';
-                                            echo '<input type="hidden" name="codCliente" value="'.$i .'">';
-                                            echo '<input type="hidden" name="codEdit" value="'.$clientes[$i]->getCod().'">';
+                                            //echo '<td class="form-group"><input type="date" class="form-control iptNasc" id="iptNasc" max="'.retData().'" name="iptNasc" value="'.str_replace('/','-',$clientes[$i]->getDataNasc()).'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptCliente_codCliente" id="iptCliente_codCliente" name="iptCliente_codCliente" placeholder="Cod Cliente" value="'.$animais[$i]->getCliente_CodCliente().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome" value="'.$animais[$i]->getNome().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptAnoNascimento" id="iptAnoNascimento" name="iptAnoNascimento" placeholder="AnoNascimento" value="'.$animais[$i]->getAnoNascimento().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptPeso" id="iptPeso" name="iptPeso" placeholder="Peso" value="'.$animais[$i]->getPeso().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptGrupo" id="iptGrupo" name="iptGrupo" placeholder="Grupo" value="'.$animais[$i]->getGrupo().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptRaca" id="iptRaca" name="iptRaca" placeholder="Raça" value="'.$animais[$i]->getRaca().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptGenero" id="iptGenero" name="iptGenero" placeholder="Gênero" value="'.$animais[$i]->getGenero().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptVacinacao" id="iptVacinacao" name="iptVacinacao" placeholder="Vanicação" value="'.$animais[$i]->getVacinacao().'"></td>';
+                                            echo '<td class="form-group"><input class="form-control iptComportamento" id="iptComportamento" name="iptComportamento" placeholder="Comportamento" value="'.$animais[$i]->getComportamento().'"></td>';                                           
+                                            echo '<input type="hidden" name="codAnimal" value="'.$i .'">';
+                                            echo '<input type="hidden" name="codEdit" value="'.$animais[$i]->getCodAnimal().'">';
                                             echo '<td class="iconesInserir"><button type="submit" value="submit request" class="fas fa-check btnIns" name="confirmEdit"></td>';
                                         }
                                         else{
-                                        echo '<td>'.$clientes[$i]->getDataNasc().'</td>';
-                                        echo '<td>'.$clientes[$i]->getNome().'</td>';
-                                        echo '<td>'.$clientes[$i]->getEmail().'</td>';
-                                        echo '<td>'.$clientes[$i]->getRg().'</td>';
-                                        echo '<td>'.$clientes[$i]->getTelefone().'</td>';
-                                        echo '<td>'.$clientes[$i]->getEndereco().'</td>';
-                                        echo '<td>'.$clientes[$i]->getBairro().'</td>';
-                                        echo '<td>'.$clientes[$i]->getCidade().'</td>';
-                                        echo '<td>'.$clientes[$i]->getEstado().'</td>';
-                                        echo '<td>'.$clientes[$i]->getPais().'</td>';
-                                        echo '<input type="hidden" name="codCliente" value="'.$clientes[$i]->getCod() .'">';
-                                        echo '<input type="hidden" name="codEdit" value="'.$clientes[$i]->getCod().'">';
+                                        echo '<td>'.$animais[$i]->getCliente_CodCliente().'</td>';
+                                        echo '<td>'.$animais[$i]->getNome().'</td>';
+                                        echo '<td>'.$animais[$i]->getAnoNascimento().'</td>';
+                                        echo '<td>'.$animais[$i]->getPeso().'</td>';
+                                        echo '<td>'.$animais[$i]->getGrupo().'</td>';
+                                        echo '<td>'.$animais[$i]->getRaca().'</td>';
+                                        echo '<td>'.$animais[$i]->getGenero().'</td>';
+                                        echo '<td>'.$animais[$i]->getVacinacao().'</td>';
+                                        echo '<td>'.$animais[$i]->getComportamento().'</td>';
+                                        
+                                        echo '<input type="hidden" name="codAnimal" value="'.$animais[$i]->getCodAnimal() .'">';
+                                        echo '<input type="hidden" name="codEdit" value="'.$animais[$i]->getCodAnimal().'">';
                                         echo '<td class="iconesEditar"><button class="fas fa-pen btnEdit"  name="edit'.$i.'"><button class="fas fa-trash btnDel" name="delete"></td>';
                                         }
                                         echo '<!--EDIT-->';
                                         echo '<!--EDIT_END-->';
                                     echo '</form>';
                                     echo '<tr>';
-                                    echo '<!--'.$clientes[$i]->getCod().'_END-->';
+                                    echo '<!--'.$animais[$i]->getCodAnimal().'_END-->';
                                 }
-                    ?>
+                            ?>
+                            <?php
+                            require_once('class/AnimalClass.php');
 
+                            if (isset($_POST['delete'])) {
+                                $objAnimal = new AnimalClass();
+                                $codNovo = $objAnimal->excluirAnimal($_POST['codAnimal']);
+                                echo '<meta http-equiv="refresh" content="0">';
+                            }
+                            ?>
                         <tr>
+                            
                         <form action="" method="post">
-                           <td class="form-group"><input class="form-control iptCod" id="iptCod" name="iptCod" placeholder="Código"></td> 
-                           <td class="form-group"><input class="form-control iptCodCliente" id="iptCodCliente" name="iptCodCliente" placeholder="Código Cliente"></td>                                     
+                           <td class="form-group"><?php $objAnimal = new AnimalClass(); echo $objAnimal->retProxCodAnimal(); ?></td>                            
+                           <td class="form-group"><input class="form-control iptCliente_codCliente" id="iptCliente_codCliente" name="iptCliente_codCliente" placeholder="Código Cliente"></td>                                     
                            <td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome"></td>                                     
-                           <td class="form-group"><input class="form-control iptNasc" id="iptNasc" name="iptNasc" placeholder="Ano Nascimento"></td>                              
+                           <td class="form-group"><input class="form-control iptAnoNascimento" id="iptAnoNascimento" name="iptAnoNascimento" placeholder="Ano Nascimento"></td>                              
                            <td class="form-group"><input class="form-control iptPeso" id="iptPeso" name="iptPeso" placeholder="Peso"></td>                           
                            <td class="form-group"><input class="form-control iptGrupo" id="iptGrupo" name="iptGrupo" placeholder="Grupo"></td>                                                  
                            <td class="form-group"><input class="form-control iptRaca" id="iptRaca" name="iptRaca" placeholder="Raça"></td>                           
                            <td class="form-group"><input class="form-control iptGenero" id="iptGenero" name="iptGenero" placeholder="Gênero"></td>                                                   
-                           <td class="form-group"><input class="form-control iptVacina" id="iptVacina" name="iptVacina" placeholder="Vacinação"></td>                                                   
+                           <td class="form-group"><input class="form-control iptVacinacao" id="iptVacinacao" name="iptVacinacao" placeholder="Vacinação"></td>                                                   
                            <td class="form-group"><input class="form-control iptComportamento" id="iptComportamento" name="iptComportamento" placeholder="Comportamento"></td>
                            <td class="iconesInserir"><button class="fas fa-pen btnEdit"><button class="fas fa-trash btnDel"></td>  
                         </form>                   
                         </tr>
                     </table>
                 </div>
+                <?php
+                    require_once('class/AnimalClass.php');
+    
+                    if (isset($_POST['inserir'])) {
+
+                        if(($_POST['iptNome']=='') || ($_POST['iptAnoNascimento']=='') || ($_POST['iptPeso']=='') || ($_POST['iptGrupo']=='') || ($_POST['iptRaca']=='') || ($_POST['iptGenero']=='') || ($_POST['iptVacinacao']=='') || ($_POST['iptComportamento']=='')){
+                            echo 'ERRO';
+                        }
+                        else{
+                        $objCliente = new AnimalClass();
+                        $codNovo = $objAnimal->retProxCodAnimal();
+
+                        $objAnimal->setCodAnimal($codNovo);
+                        $objAnimal->setCliente_CodCliente($_POST['iptCliente_codCliente']);
+                        $objAnimal->setNome($_POST['iptNome']);
+                        $objAnimal->setAnoNascimento(str_replace('-','/',$_POST['iptAnoNascimento']));          
+                        $objAnimal->setPeso($_POST['iptPeso']);
+                        $objAnimal->setGrupo($_POST['iptGrupo']);
+                        $objAnimal->setRaca($_POST['iptRaca']);
+                        $objAnimal->setGenero($_POST['iptGenero']);
+                        $objAnimal->setVacinacao($_POST['iptVacinacao']);
+                        $objAnimal->setComportamento($_POST['iptComportamento']);
+
+                        $objAnimal->inserirAnimal($objAnimal);
+                        echo '<meta http-equiv="refresh" content="0">';
+                        }
+                    }
+
+                   
+                    if (isset($_POST['confirmEdit'])) {
+
+                        if(($_POST['iptNome']=='') || ($_POST['iptAnoNascimento']=='') || ($_POST['iptPeso']=='') || ($_POST['iptGrupo']=='') || ($_POST['iptRaca']=='') || ($_POST['iptGenero']=='') || ($_POST['iptVacinacao']=='') || ($_POST['iptComportamento']=='')){
+                            echo 'ERRO';
+                        }
+                        else{
+                        $objAnimal = new AnimalClass();
+                        $codNovo = $_POST['codEdit'];
+
+                        $objAnimal->setCodAnimal($codNovo);                       
+                        $objAnimal->setCliente_CodCliente($_POST['iptCliente_codCliente']);
+                        $objAnimal->setNome($_POST['iptNome']);
+                        $objAnimal->setAnoNascimento(str_replace('-','/',$_POST['iptAnoNascimento']));          
+                        $objAnimal->setPeso($_POST['iptPeso']);
+                        $objAnimal->setGrupo($_POST['iptGrupo']);
+                        $objAnimal->setRaca($_POST['iptRaca']);
+                        $objAnimal->setGenero($_POST['iptGenero']);
+                        $objAnimal->setVacinacao($_POST['iptVacinacao']);
+                        $objAnimal->setComportamento($_POST['iptComportamento']);
+
+                        $objAnimal->editarAnimal($objAnimal);
+                        echo '<meta http-equiv="refresh" content="0">';
+                        }
+                    }
+                ?>
+                <script>
+                    $('#styleTable tr').mouseenter(function() {
+                        $(this).find('td.iconesEditar').addClass('show');
+                    });
+
+                    $('#styleTable tr').mouseleave(function() {
+                        $(this).find('td.iconesEditar').removeClass('show');
+                    });
+
+                </script>
             </body>
