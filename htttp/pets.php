@@ -88,8 +88,7 @@ if ($_SESSION["userId"] == "") {
                                 for ($i = 0; $i < $max; $i++) {
                                     $animais[$i] = new AnimalClass();
                                     $animais[$i]->setCodAnimal($tableAnimal[$i]['codAnimal']);
-                                    $animais[$i]->setCliente_CodCliente($tableAnimal[$i]['Cliente_CodCliente']);
-                                    //PAROU AQUI                                    
+                                    $animais[$i]->setCliente_CodCliente($tableAnimal[$i]['Cliente_codCliente']);                              
                                     $animais[$i]->setNome($tableAnimal[$i]['nome']);
                                     $animais[$i]->setAnoNascimento($tableAnimal[$i]['anoNascimento']);
                                     $animais[$i]->setPeso($tableAnimal[$i]['peso']);
@@ -97,10 +96,10 @@ if ($_SESSION["userId"] == "") {
                                     $animais[$i]->setRaca($tableAnimal[$i]['raca']);
                                     $animais[$i]->setGenero($tableAnimal[$i]['genero']);
                                     $animais[$i]->setVacinacao($tableAnimal[$i]['vacinacao']);
-                                    $animais[$i]->setComportamento($tableAnimal[$i]['comportamento']);                                   
+                                    $animais[$i]->setComportamento($tableAnimal[$i]['comportameto']);                                   
 
-                                    echo '<!--'.$animais[$i]->getCod().'_START-->';
-                                    echo $i % 2 == 0?  '<tr id="'.$animais[$i]->getCod() .'">': '<tr class="even" id="COD'.$i.'">';
+                                    echo '<!--'.$animais[$i]->getCodAnimal().'_START-->';
+                                    echo $i % 2 == 0?  '<tr id="'.$animais[$i]->getCodAnimal() .'">': '<tr class="even" id="COD'.$i.'">';
                                     echo '<form action="" method="post">';
                                         echo '<td>'.$animais[$i]->getCodAnimal() .'</td>';
                                         //echo '<td>'.$animais[$i]->getDataCad().'</td>';
@@ -163,7 +162,7 @@ if ($_SESSION["userId"] == "") {
                            <td class="form-group"><input class="form-control iptGenero" id="iptGenero" name="iptGenero" placeholder="Gênero"></td>                                                   
                            <td class="form-group"><input class="form-control iptVacinacao" id="iptVacinacao" name="iptVacinacao" placeholder="Vacinação"></td>                                                   
                            <td class="form-group"><input class="form-control iptComportamento" id="iptComportamento" name="iptComportamento" placeholder="Comportamento"></td>
-                           <td class="iconesInserir"><button class="fas fa-pen btnEdit"><button class="fas fa-trash btnDel"></td>  
+                           <td class="iconesInserir"><button type="submit" value="submit request" class="fas fa-check btnIns" name="inserir"></td>
                         </form>                   
                         </tr>
                     </table>
@@ -183,7 +182,7 @@ if ($_SESSION["userId"] == "") {
                         $objAnimal->setCodAnimal($codNovo);
                         $objAnimal->setCliente_CodCliente($_POST['iptCliente_codCliente']);
                         $objAnimal->setNome($_POST['iptNome']);
-                        $objAnimal->setAnoNascimento(str_replace('-','/',$_POST['iptAnoNascimento']));          
+                        $objAnimal->setAnoNascimento($_POST['iptAnoNascimento']);          
                         $objAnimal->setPeso($_POST['iptPeso']);
                         $objAnimal->setGrupo($_POST['iptGrupo']);
                         $objAnimal->setRaca($_POST['iptRaca']);
@@ -218,6 +217,7 @@ if ($_SESSION["userId"] == "") {
                         $objAnimal->setComportamento($_POST['iptComportamento']);
 
                         $objAnimal->editarAnimal($objAnimal);
+                        
                         echo '<meta http-equiv="refresh" content="0">';
                         }
                     }

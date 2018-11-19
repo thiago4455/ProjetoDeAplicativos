@@ -122,8 +122,8 @@ class AnimalClass {
         $genero = $objAnimal->getGenero();
         $vacinacao = $objAnimal->getVacinacao();
         $comportamento = $objAnimal->getComportamento();
-        
-        $objConexao->exercutarComandoSQL("INSERT INTO Animal (codAnimal, Cliente_codCliente, nome, anoNascimento, peso, grupo, raca, genero, vacinacao, comportamento) VALUES ('$codAnimal', '$Cliente_codCliente', '$nome', '$anoNascimento', '$peso', '$grupo', '$raca', '$genero', '$vacinacao', '$comportamento')");               
+        echo "INSERT INTO Animal (codAnimal, Cliente_codCliente, nome, anoNascimento, peso, grupo, raca, genero, vacinacao, comportameto) VALUES ('$codAnimal', '$Cliente_codCliente', '$nome', '$anoNascimento', '$peso', '$grupo', '$raca', '$genero', '$vacinacao', '$comportamento')";
+        $objConexao->exercutarComandoSQL("INSERT INTO Animal (codAnimal, Cliente_codCliente, nome, anoNascimento, peso, grupo, raca, genero, vacinacao, comportameto) VALUES ('$codAnimal', '$Cliente_codCliente', '$nome', '$anoNascimento', '$peso', '$grupo', '$raca', '$genero', '$vacinacao', '$comportamento')");               
 
         return true;
     }
@@ -142,8 +142,7 @@ class AnimalClass {
         $genero = $objAnimal->getGenero();
         $vacinacao = $objAnimal->getVacinacao();
         $comportamento = $objAnimal->getComportamento();
-       
-        $objConexao->exercutarComandoSQL("UPDATE Animal SET codAnimal='$codAnimal', Cliente_codCliente='$Cliente_codCliente', nome='$nome',anoNascimento='$anoNascimento', peso='$peso', grupo='$grupo', raca='$raca', genero='$genero', vacinacao='$vacinacao', comportamento='$comportamento' WHERE codAnimal='$codAnimal'");               
+        $objConexao->exercutarComandoSQL("UPDATE Animal SET codAnimal='$codAnimal', Cliente_codCliente='$Cliente_codCliente', nome='$nome',anoNascimento='$anoNascimento', peso='$peso', grupo='$grupo', raca='$raca', genero='$genero', vacinacao='$vacinacao', comportameto='$comportamento' WHERE codAnimal='$codAnimal'");               
 
         return true;
     }
