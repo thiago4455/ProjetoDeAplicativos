@@ -62,7 +62,6 @@ $_SESSION["userType"] = "";
 
                     $max = sizeof($tablefuncs);
 
-                    echo '<hr/>';
                     for ($i = 0; $i < $max; $i++) {
                         if(($_POST['email'] == $tablefuncs[$i]["email"]) && ($_POST['passwd'] == $tablefuncs[$i]["senha"])){
                             $_SESSION["userId"] = $tablefuncs[$i]["codFuncionario"];
@@ -74,7 +73,7 @@ $_SESSION["userType"] = "";
                             $_SESSION["userType"] = "";
                         }
                     }
-                    echo   'Usuário / Senha incorretos';
+                    echo   '<p style="color: #fc5050;">Usuário / Senha incorretos<p>';
                 }
                 ?>                    
 

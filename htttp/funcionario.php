@@ -60,21 +60,80 @@ if ($_SESSION["userType"] != "1") {
                                 <th>País</th>                                
                             </tr>
                         </thead>
-                        <tr>
-                           <td>FUNC001</td> 
-                           <td>07/11/2018</td>                                                  
-                           <td>11/12/1984</td>                           
-                           <td>Michelle Belli</td>                           
-                           <td>michellebf@gmail.com</td>                           
-                           <td>12Mm123</td>                           
-                           <td>MG9.999.999</td>                                                  
-                           <td>(31)9999-9999</td>                                                   
-                           <td>Av. Da casa Dela, 344</td>                                                   
-                           <td>Centro</td>                                                                        
-                           <td>Betim</td>                           
-                           <td>MG</td>                           
-                           <td>Brasil</td>                           
-                        </tr>
+                        <?php
+                        require_once('class/FuncionarioClass.php');
+                        $objFunc = new ClienteClass();
+                        $tablefuncs = $objFunc->retFuncionarios();
+                        $max = sizeof($tablefuncs);
+
+                        $funcionarios = array();
+
+                        for ($i = 0; $i < $max; $i++) {
+                            $funcionarios[$i] = new ClienteClass();
+                            $funcionarios[$i]->setCod($tablefuncs[$i]['codCliente']);
+                            $funcionarios[$i]->setDataCad($tablefuncs[$i]['dataCadastro']);
+                            $funcionarios[$i]->setDataNasc($tablefuncs[$i]['dataNascimento']);
+                            $funcionarios[$i]->setNome($tablefuncs[$i]['nome']);
+                            $funcionarios[$i]->setEmail($tablefuncs[$i]['email']);
+                            $funcionarios[$i]->setRg($tablefuncs[$i]['rg']);
+                            $funcionarios[$i]->setTelefone($tablefuncs[$i]['telefone']);
+                            $funcionarios[$i]->setEndereco($tablefuncs[$i]['endereco']);
+                            $funcionarios[$i]->setCidade($tablefuncs[$i]['cidade']);
+                            $funcionarios[$i]->setEstado($tablefuncs[$i]['estado']);
+                            $funcionarios[$i]->setPais($tablefuncs[$i]['pais']);
+                            $funcionarios[$i]->setBairro($tablefuncs[$i]['bairro']);
+
+                            echo '<!--'.$funcionarios[$i]->getCod().'_START-->';
+                            echo $i % 2 == 0?  '<tr id="'.$funcionarios[$i]->getCod() .'">': '<tr class="even" id="COD'.$i.'">';
+                            echo '<form action="" method="post">';
+                                echo '<td>'.$funcionarios[$i]->getCod() .'</td>';
+                                echo '<td>'.$funcionarios[$i]->getDataCad().'</td>';
+                                if (isset($_POST['edit'.$i])) {
+                                    echo '<td class="form-group"><input type="date" class="form-control iptNasc" id="iptNasc" max="'.retData().'" name="iptNasc" value="'.str_replace('/','-',$clientes[$i]->getDataNasc()).'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome" value="'.$clientes[$i]->getNome().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptEmail" id="iptEmail" name="iptEmail" placeholder="Email" value="'.$clientes[$i]->getEmail().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptRg" id="iptRg" name="iptRg" placeholder="RG" value="'.$clientes[$i]->getRg().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptTelefone" id="iptTelefone" name="iptTelefone" placeholder="(31)9999-9999" value="'.$clientes[$i]->getTelefone().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptEndereco" id="iptEndereco" name="iptEndereco" placeholder="Endereço" value="'.$clientes[$i]->getEndereco().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptBairro" id="iptBairro" name="iptBairro" placeholder="Bairro" value="'.$clientes[$i]->getBairro().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptCidade" id="iptCidade" name="iptCidade" placeholder="Cidade" value="'.$clientes[$i]->getCidade().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptEstado" id="iptEstado" name="iptEstado" placeholder="Estado" value="'.$clientes[$i]->getEstado().'"></td>';
+                                    echo '<td class="form-group"><input class="form-control iptPais" id="iptPais" name="iptPais" placeholder="País" value="'.$clientes[$i]->getPais().'"></td>';
+                                    echo '<input type="hidden" name="codCliente" value="'.$i .'">';
+                                    echo '<input type="hidden" name="codEdit" value="'.$funcionarios[$i]->getCod().'">';
+                                    echo '<td class="iconesInserir"><button type="submit" value="submit request" class="fas fa-check btnIns" name="confirmEdit"></td>';
+                                }
+                                else{
+                                echo '<td>'.$funcionarios[$i]->getDataNasc().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getNome().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getEmail().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getRg().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getTelefone().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getEndereco().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getBairro().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getCidade().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getEstado().'</td>';
+                                echo '<td>'.$funcionarios[$i]->getPais().'</td>';
+                                echo '<input type="hidden" name="codCliente" value="'.$funcionarios[$i]->getCod() .'">';
+                                echo '<input type="hidden" name="codEdit" value="'.$funcionarios[$i]->getCod().'">';
+                                echo '<td class="iconesEditar"><button class="fas fa-pen btnEdit"  name="edit'.$i.'"><button class="fas fa-trash btnDel" name="delete"></td>';
+                                }
+                                echo '<!--EDIT-->';
+                                echo '<!--EDIT_END-->';
+                            echo '</form>';
+                            echo '<tr>';
+                            echo '<!--'.$funcionarios[$i]->getCod().'_END-->';
+                        }
+                    ?>
+                    <?php
+                    require_once('class/ClienteClass.php');
+    
+                    if (isset($_POST['delete'])) {
+                        $objFunc = new ClienteClass();
+                        $codNovo = $objFunc->excluirFuncionario($_POST['codFuncionario']);
+                        echo '<meta http-equiv="refresh" content="0">';
+                    }
+                ?>
                         <tr>
                         <form action="" method="post">
                            <td class="form-group"><input class="form-control iptCod" id="iptCod" name="iptCod" placeholder="Código"></td> 

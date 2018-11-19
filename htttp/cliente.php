@@ -208,7 +208,8 @@ function  retData(){
                         $codNovo = $_POST['codEdit'];
 
                         $objCliente->setCod($codNovo);
-                        $objCliente->setDataCad(retData());
+                        $data = retData();
+                        $objCliente->setDataCad($data);
                         $objCliente->setDataNasc(str_replace('-','/',$_POST['iptNasc']));
                         $objCliente->setNome($_POST['iptNome']);
                         $objCliente->setEmail($_POST['iptEmail']);

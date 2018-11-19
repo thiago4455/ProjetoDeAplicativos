@@ -155,7 +155,6 @@ class ClienteClass {
         $dataNasc = $objCliente->getDataNasc();
         $nome = $objCliente->getNome();
         $email = $objCliente->getEmail();
-        $senha = $objCliente->getSenha();
         $rg = $objCliente->getRg();
         $telefone = $objCliente->getTelefone();
         $endereco = $objCliente->getEndereco();
@@ -163,8 +162,8 @@ class ClienteClass {
         $cidade = $objCliente->getCidade();
         $estado = $objCliente->getEstado();
         $pais = $objCliente->getPais();
-        
-        $objConexao->exercutarComandoSQL("UPDATE Cliente SET codCliente='$codCliente', dataCadastro='$dataCad', dataNascimento='$dataNasc', nome='$nome', rg='$rg', telefone='$telefone', senha='$senha', endereco='$endereco', cidade='$cidade', bairro='$bairro', estado='$estado', pais='$pais'  WHERE codCliente='$codCliente'");               
+       
+        $objConexao->exercutarComandoSQL("UPDATE Cliente SET codCliente='$codCliente', dataCadastro='$dataCad', dataNascimento='$dataNasc', nome='$nome',email='$email', rg='$rg', telefone='$telefone', endereco='$endereco', cidade='$cidade', bairro='$bairro', estado='$estado', pais='$pais'  WHERE codCliente='$codCliente'");               
 
         return true;
     }
