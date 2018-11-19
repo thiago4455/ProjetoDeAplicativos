@@ -228,15 +228,6 @@ function  retData(){
                 ?>
 
                 <script>
-
-                    var max=<?php
-                        require_once('class/ClienteClass.php');
-                        $objCliente = new ClienteClass();
-                        $tableclientes = $objCliente->retClientes();
-                        $max = sizeof($tableclientes);
-                        echo $max;
-                    ?>;
-
                     $('#styleTable tr').mouseenter(function() {
                         $(this).find('td.iconesEditar').addClass('show');
                     });

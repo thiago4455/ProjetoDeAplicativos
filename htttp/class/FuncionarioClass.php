@@ -80,55 +80,55 @@ class FuncionarioClass {
         $this->codFunc = $codFunc;
     }
 
-    function setDataCad() {
+    function setDataCad($dataCad) {
         $this->dataCad = $dataCad;
     }
 
-    function setDataNasc() {
+    function setDataNasc($dataNasc) {
         $this->dataNasc = $dataNasc;
     }
 
-    function setNome() {
+    function setNome($nome) {
         $this->nome = $nome;
     }
 
-    function setEmail() {
+    function setEmail($email) {
         $this->email = $email;
     }
 
-    function setSenha() {
+    function setSenha($senha) {
         $this->senha = $senha;
     }
 
-    function setRg() {
+    function setRg($rg) {
         $this->rg = $rg;
     }
 
-    function setTelefone() {
+    function setTelefone($telefone) {
         $this->telefone = $telefone;
     }
 
-    function setEndereco() {
+    function setEndereco($endereco) {
         $this->endereco = $endereco;
     }
 
-    function setCidade() {
+    function setCidade($cidade) {
         $this->cidade = $cidade;
     }
 
-    function setEstado() {
+    function setEstado($estado) {
         $this->estado = $estado;
     }
 
-    function setPais() {
+    function setPais($pais) {
         $this->pais = $pais;
     }
 
-    function setBairro() {
+    function setBairro($bairro) {
         $this->bairro = $bairro;
     }
 
-    function setTipo() {
+    function setTipo($codTipo) {
         $this->codTipo = $codTipo;
     }
 
@@ -143,7 +143,7 @@ class FuncionarioClass {
 
     public function inserirFuncionario($objFunc) {
         require_once('class/ConexaoClass.php');
-        $objConexao = new ConexaoClass("localhost", "root", "", "dbPhpBancoDados");   
+        $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");   
         
         $codFunc = $objFunc->getCod();
         $dataCad = $objFunc->getDataCad();
@@ -168,7 +168,7 @@ class FuncionarioClass {
     
     public function editarFuncionario($objFunc) {
         require_once('class/ConexaoClass.php');
-        $objConexao = new ConexaoClass("localhost", "root", "", "dbPhpBancoDados");   
+        $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");   
         
         $codFunc = $objFunc->getCod();
         $dataCad = $objFunc->getDataCad();
@@ -183,21 +183,32 @@ class FuncionarioClass {
         $cidade = $objFunc->getCidade();
         $estado = $objFunc->getEstado();
         $pais = $objFunc->getPais();
+        $codTipo = $objFunc->getTipo();
         
-        $objConexao->exercutarComandoSQL("UPDATE Funcionario SET (codFuncionario='$codFunc', dataCadastro='$dataCad', dataNascimento='$dataNasc', nome='$nome', rg='$rg', telefone='$telefone', email='$email', senha='$senha', endereco='$endereco', cidade='$cidade', bairro='$bairro', estado='$estado', pais='$pais', codTipo='$codTipo')  WHERE codFuncionario='$codFunc'");               
+        $objConexao->exercutarComandoSQL("UPDATE Funcionario SET codFuncionario='$codFunc', dataCadastro='$dataCad', dataNascimento='$dataNasc', nome='$nome', rg='$rg', telefone='$telefone', email='$email', senha='$senha', endereco='$endereco', cidade='$cidade', bairro='$bairro', estado='$estado', pais='$pais', codTipo='$codTipo'  WHERE codFuncionario='$codFunc'");               
 
         return true;
     }
     
-    public function excluirProfessor($objFunc) {
+    public function excluirFuncionario($codFunc) {
         require_once('class/ConexaoClass.php');
-        $objConexao = new ConexaoClass("localhost", "root", "", "dbPhpBancoDados");   
-        
-        $codFunc = $objFunc->getCodProfessor();        
+        $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");   
         
         $objConexao->exercutarComandoSQL("DELETE FROM Funcionario WHERE codFuncionario='$codFunc'");               
 
         return true;
     }
-
+    public function retProxCodFunc(){
+        $tableclientes = $this->retFuncionarios();
+        $max = sizeof($tableclientes);
+        $codAntigo  = $tableclientes[$max-1]['codFuncionario'];
+        $codAntigo = substr($codAntigo,4,3);
+        $numNovo =  intval($codAntigo)+1;
+        $numString = (string)$numNovo;
+        while (strlen($numString) < 3){
+            $numString = '0'.$numString;
+        }
+        $codNovo = 'FUNC'.$numString;
+        return $codNovo;
+    }
 }
