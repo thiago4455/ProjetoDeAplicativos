@@ -24,9 +24,13 @@ namespace ProjetoDeAplicativos
         public Principal()
         {
             InitializeComponent();
-
-            Button[] botoes = { btnAnimal, btnCliente };
-            this.botoes = botoes;
+            botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico};
+            for (int i = 0; i < botoes.Length; i++)
+            {
+                int num = i;
+                botoes[num].Click += (sender, e) => atualizar(sender,e,num);
+            }
+            atualizar();
         }
 
         public Principal(Funcionario func)
@@ -68,6 +72,39 @@ namespace ProjetoDeAplicativos
                 WindowState = FormWindowState.Maximized;
             else
                 WindowState = FormWindowState.Normal;
+        }
+
+        private void atualizar(object sender, EventArgs e, int num)
+        {
+            int tipoServico = num;
+
+            for (int i = 0; i < botoes.Length; i++)
+            {
+                if (i== tipoServico)
+                {
+                    botoes[i].BackColor = Color.FromArgb(13, 115, 84);
+                }
+                else
+                {
+                    botoes[i].BackColor = Color.FromArgb(19, 170, 125);
+                }
+            }
+        }
+
+        private void atualizar()
+        {
+
+            for (int i = 0; i < botoes.Length; i++)
+            {
+                if (i == tipoServico)
+                {
+                    botoes[i].BackColor = Color.FromArgb(13, 115, 84);
+                }
+                else
+                {
+                    botoes[i].BackColor = Color.FromArgb(19, 170, 125);
+                }
+            }
         }
     }
 }
