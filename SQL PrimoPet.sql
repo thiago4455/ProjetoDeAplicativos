@@ -38,7 +38,6 @@ CREATE TABLE Cliente(
 CREATE TABLE Animal(
 	codAnimal VARCHAR(10) PRIMARY KEY NOT NULL,
     nome VARCHAR(50) NOT NULL,
-    rg VARCHAR(14) NOT NULL,
     anoNascimento INT NOT NULL,
     peso DECIMAL NOT NULL,
     grupo VARCHAR(20) NOT NULL,
@@ -71,14 +70,14 @@ CREATE TABLE Agendamento(
 ) ENGINE=INNODB;
 
 CREATE TABLE Execucao(
-    codAgendamento VARCHAR(10) PRIMARY KEY NOT NULL,
+    codExecucao VARCHAR(10) PRIMARY KEY NOT NULL,
     dataExecucao VARCHAR(10) NOT NULL,
     horaExecucao VARCHAR(5) NOT NULL,
     observacoes VARCHAR(200) NOT NULL,
     Animal_codAnimal VARCHAR(10) NOT NULL,
     FOREIGN KEY (Animal_codAnimal) REFERENCES Animal(codAnimal),
-    Servico_codServico VARCHAR(10) NOT NULL,
-    FOREIGN KEY (Servico_codServico) REFERENCES Servico(codServico),
+    Agendamento_codAgendamento VARCHAR(10) NOT NULL,
+    FOREIGN KEY (Agendamento_codAgendamento) REFERENCES Agendamento(codAgendamento),
     codVeterinario VARCHAR(10) NOT NULL,
     FOREIGN KEY (codVeterinario) REFERENCES Funcionario(codFuncionario)
 ) ENGINE=INNODB;
