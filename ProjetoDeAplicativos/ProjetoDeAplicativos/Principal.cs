@@ -33,9 +33,16 @@ namespace ProjetoDeAplicativos
             atualizar();
         }
 
-        public Principal(Funcionario func)
+        public Principal(FuncionarioClass funcLogado)
         {
             InitializeComponent();
+            botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico };
+            for (int i = 0; i < botoes.Length; i++)
+            {
+                int num = i;
+                botoes[num].Click += (sender, e) => atualizar(sender, e, num);
+            }
+            atualizar();
         }
 
         private void picTopbar_MouseDown(object sender, MouseEventArgs e)
@@ -76,19 +83,9 @@ namespace ProjetoDeAplicativos
 
         private void atualizar(object sender, EventArgs e, int num)
         {
-            int tipoServico = num;
+            tipoServico = num;
 
-            for (int i = 0; i < botoes.Length; i++)
-            {
-                if (i== tipoServico)
-                {
-                    botoes[i].BackColor = Color.FromArgb(13, 115, 84);
-                }
-                else
-                {
-                    botoes[i].BackColor = Color.FromArgb(19, 170, 125);
-                }
-            }
+            atualizar();
         }
 
         private void atualizar()
@@ -104,6 +101,28 @@ namespace ProjetoDeAplicativos
                 {
                     botoes[i].BackColor = Color.FromArgb(19, 170, 125);
                 }
+            }
+
+            switch (tipoServico)
+            {
+                default:
+                    //FormFuncionario objForm = FormFuncionario.InstanceForm();
+                    break;
+                case 1:
+                    //FormCliente objForm = FormCliente.InstanceForm();
+                    break;
+                case 2:
+                    //FormAnimal objForm = FormAnimal.InstanceForm();
+                    break;
+                case 3:
+                    //FormServico objForm = FormServico.InstanceForm();
+                    break;
+
+                /*objForm.TopLevel = false;
+                pnlPrincipal.Controls.Add(objForm);
+                objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                objForm.Dock = DockStyle.Fill;
+                objForm.Show();*/
             }
         }
     }
