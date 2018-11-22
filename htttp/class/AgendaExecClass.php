@@ -55,8 +55,8 @@ class AgendaExecClass {
         $this->dataPrevista = $dataPrevista;
     }
 
-    function setHoraPrevista($dataPrevista) {
-        $this->dataPrevista = $dataPrevista;
+    function setHoraPrevista($horaPrevista) {
+        $this->horaPrevista = $horaPrevista;
     }
 
     function setObs($observacoes) {
@@ -86,7 +86,7 @@ class AgendaExecClass {
     public function retAgendaExec() {
         require_once('class/ConexaoClass.php');
         $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");
-        $tableAgendaExec = $objConexao->selecionarDados("SELECT * FROM Agendamento INNER JOIN (Animal ON Animal.codAnimal = Agendamento.codAnimal)INNER JOIN(Servico ON Servico.CodServico = Agendamento.CodServico)INNER JOIN(Funcionario ON Funcionario.codFuncionario = Agendamento.codVeterinario)");
+        $tableAgendaExec = $objConexao->selecionarDados("SELECT * FROM Agendamento INNER JOIN Execucao ON (Execucao.Agendamento_codAgendamento = Agendamento.codAgendamento)");
 
         return $tableAgendaExec;
     }
@@ -98,14 +98,14 @@ class AgendaExecClass {
         $codAgendamento = $objAgendaExec->getCodAgendamento();
         $dataPrevista = $objAgendaExec->getDataPrevista();
         $horaPrevista = $objAgendaExec->getHoraPrevista();
-        $observacoes = $objAgendaExec->getObservacoes();
+        $observacoes = $objAgendaExec->getObs();
         $codAnimal = $objAgendaExec->getCodAnimal();
         $codServico = $objAgendaExec->getCodServico();
         $codVeterinario = $objAgendaExec->getCodVeterinario();
         $dataExecucao = $objAgendaExec->getDataExecucao();
         $horaExecucao = $objAgendaExec->getHoraExecucao();
-        
-        $objConexao->exercutarComandoSQL("INSERT INTO Agendamento(codAgendamento,dataPrevista,horaPrevista,observacoes,codAnimal,codServico,codVeterinario,dataExecucao,horaExecucao VALUES ('$codAgendamento','$dataPrevista','$horaPrevista','$observacoes','$codAnimal','$codServico','$codVeterinario','$dataExecucao','$horaExecucao'");               
+        $objConexao->exercutarComandoSQL("INSERT INTO Agendamento(codAgendamento,dataPrevista,horaPrevista,observacoes,Animal_codAnimal,Servico_codServico,codVeterinario) VALUES ('$codAgendamento','$dataPrevista','$horaPrevista','$observacoes','$codAnimal','$codServico','$codVeterinario')");               
+        $objConexao->exercutarComandoSQL("INSERT INTO Execucao(codExecucao,dataExecucao,horaExecucao,observacoes,Animal_codAnimal,Agendamento_codAgendamento,codVeterinario) VALUES ('$codAgendamento','$dataExecucao','$horaExecucao','$observacoes','$codAnimal','$codAgendamento','$codVeterinario')");               
 
         return true;
     }
@@ -133,6 +133,7 @@ class AgendaExecClass {
         require_once('class/ConexaoClass.php');
         $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");   
         
+        $objConexao->exercutarComandoSQL("DELETE FROM Execucao WHERE Agendamento_codAgendamento='$codAgendamento'");  
         $objConexao->exercutarComandoSQL("DELETE FROM Agendamento WHERE codAgendamento='$codAgendamento'");               
 
         return true;

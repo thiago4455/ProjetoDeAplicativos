@@ -74,7 +74,7 @@ class ServicoClass {
         $descricao = $objServico->getDescricao();
         $valor = $objServico->getValor();
        
-        $objConexao->exercutarComandoSQL("UPDATE Cliente SET codServico='$codServico', nome='$nome',descricao='$descricao', valor='$valor' WHERE codServico='$codServico'");               
+        $objConexao->exercutarComandoSQL("UPDATE Servico SET codServico='$codServico', nome='$nome',descricao='$descricao', valor='$valor' WHERE codServico='$codServico'");               
 
         return true;
     }
