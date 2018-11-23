@@ -46,7 +46,7 @@ class AgendaExecClass {
     function getHoraExecucao() {
         return $this->horaExecucao;
     }
-    
+       
     function setCodAgendamento($codAgendamento) {
         $this->codAgendamento = $codAgendamento;
     }
@@ -117,14 +117,15 @@ class AgendaExecClass {
         $codAgendamento = $objAgendaExec->getCodAgendamento();
         $dataPrevista = $objAgendaExec->getDataPrevista();
         $horaPrevista = $objAgendaExec->getHoraPrevista();
-        $observacoes = $objAgendaExec->getObservacoes();
+        $observacoes = $objAgendaExec->getObs();
         $codAnimal = $objAgendaExec->getCodAnimal();
         $codServico = $objAgendaExec->getCodServico();
         $codVeterinario = $objAgendaExec->getCodVeterinario();
         $dataExecucao = $objAgendaExec->getDataExecucao();
         $horaExecucao = $objAgendaExec->getHoraExecucao();
         
-        $objConexao->exercutarComandoSQL("UPDATE Agentamento SET codAgendamento='$codAgendamento','$dataPrevista','$horaPrevista','$observacoes','$codAnimal','$codServico','$codVeterinario','$dataExecucao','$dataPrevista' WHERE codAgendamento = '$codAgendamento'");               
+        $objConexao->exercutarComandoSQL("UPDATE Agendamento SET dataPrevista='$dataPrevista',horaPrevista='$horaPrevista',observacoes='$observacoes',Animal_codAnimal='$codAnimal',Servico_codServico='$codServico',codVeterinario='$codVeterinario' WHERE codAgendamento = '$codAgendamento'");               
+        $objConexao->exercutarComandoSQL("UPDATE Execucao SET dataExecucao='$dataExecucao',horaExecucao='$horaExecucao',observacoes='$observacoes',Animal_codAnimal='$codAnimal',Agendamento_codAgendamento='$codAgendamento',codVeterinario='$codVeterinario' WHERE codExecucao = '$codAgendamento'");               
 
         return true;
     }
