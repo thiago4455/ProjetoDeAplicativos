@@ -652,6 +652,13 @@
     margin-right: 2%;
 }
 
+.tamanhoTabelaSrv{
+	width: auto;
+    display: flex; 
+    margin-left: 4.5%;
+    margin-right: 2%;
+}
+
 .logout{
 	display: flex;
 	margin-top: auto;
@@ -670,10 +677,11 @@
 	display: none;
 }
 
-iconesInserir{
+.iconesInserir{
 	width: 2.7%;
 	flex-direction: row;
 }
+
 
 .show{
 	display: table-cell;
@@ -701,4 +709,9 @@ iconesInserir{
 
 .btnEdit:hover, .btnDel:hover, .btnIns:hover{
 	color: #89D265;
+}
+
+.showSrv{
+    display: table-cell;
+    flex-direction: row;
 }
