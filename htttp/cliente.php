@@ -154,8 +154,8 @@ function  retData(){
                            <td class="form-group"><input type='date' max="<?php echo retData(); ?>" class="form-control iptNasc" id="iptNasc" name="iptNasc"></td>                           
                            <td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome"></td>                           
                            <td class="form-group"><input class="form-control iptEmail" id="iptEmail" name="iptEmail" placeholder="Email"></td>                           
-                           <td class="form-group"><input class="form-control iptRg" id="iptRg" name="iptRg" placeholder="RG"></td>                                                  
-                           <td class="form-group"><input class="form-control iptTelefone" id="iptTelefone" name="iptTelefone" placeholder="(31)9999-9999"></td>                           
+                           <td class="form-group"><input class="form-control iptRg rg" id="iptRg" name="iptRg" placeholder="RG"></td>                                                  
+                           <td class="form-group"><input class="form-control iptTelefone phone" id="iptTelefone" name="iptTelefone" placeholder="(31)9999-9999"></td>                           
                            <td class="form-group"><input class="form-control iptEndereco" id="iptEndereco" name="iptEndereco" placeholder="Endereço"></td>                                                   
                            <td class="form-group"><input class="form-control iptBairro" id="iptBairro" name="iptBairro" placeholder="Bairro"></td>                                                   
                            <td class="form-group"><input class="form-control iptCidade" id="iptCidade" name="iptCidade" placeholder="Cidade"></td>                                                                        
@@ -235,6 +235,16 @@ function  retData(){
                     $('#styleTable tr').mouseleave(function() {
                         $(this).find('td.iconesEditar').removeClass('show');
                     });
+                    
+                    
+                    $(function () {                        
+                        $(".phone").mask("(99) 9999-9999");
 
+                        $(".rg").mask('aa.99-999-999');
+
+                        $("input").blur(function () {
+                         $("#info").html("Valor sem máscara: " + $(this).mask());
+                        });
+                    });
                 </script>
             </body>
