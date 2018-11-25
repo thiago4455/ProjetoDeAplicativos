@@ -41,6 +41,7 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.picTopbar = new System.Windows.Forms.PictureBox();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.painelNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTopbar)).BeginInit();
@@ -57,7 +58,7 @@
             this.painelNavBar.Controls.Add(this.btnFuncionario);
             this.painelNavBar.Location = new System.Drawing.Point(0, 27);
             this.painelNavBar.Name = "painelNavBar";
-            this.painelNavBar.Size = new System.Drawing.Size(174, 516);
+            this.painelNavBar.Size = new System.Drawing.Size(174, 554);
             this.painelNavBar.TabIndex = 0;
             // 
             // btnServico
@@ -122,10 +123,10 @@
             // 
             // picLogo
             // 
-            this.picLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picLogo.Location = new System.Drawing.Point(806, 27);
+            this.picLogo.Location = new System.Drawing.Point(1360, 514);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(98, 67);
             this.picLogo.TabIndex = 4;
@@ -151,7 +152,7 @@
             this.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaximizar.Location = new System.Drawing.Point(846, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(1400, 0);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(29, 29);
             this.btnMaximizar.TabIndex = 33;
@@ -167,7 +168,7 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimizar.Location = new System.Drawing.Point(817, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1371, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(29, 29);
             this.btnMinimizar.TabIndex = 32;
@@ -182,7 +183,7 @@
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Location = new System.Drawing.Point(875, 0);
+            this.btnFechar.Location = new System.Drawing.Point(1429, 0);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(29, 29);
             this.btnFechar.TabIndex = 31;
@@ -197,7 +198,7 @@
             this.picTopbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.picTopbar.Location = new System.Drawing.Point(0, 0);
             this.picTopbar.Name = "picTopbar";
-            this.picTopbar.Size = new System.Drawing.Size(904, 29);
+            this.picTopbar.Size = new System.Drawing.Size(1458, 29);
             this.picTopbar.TabIndex = 30;
             this.picTopbar.TabStop = false;
             this.picTopbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picTopbar_MouseDown);
@@ -205,27 +206,29 @@
             // 
             // pnlPrincipal
             // 
-            this.pnlPrincipal.Location = new System.Drawing.Point(180, 35);
+            this.pnlPrincipal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlPrincipal.Location = new System.Drawing.Point(177, 28);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(711, 494);
+            this.pnlPrincipal.Size = new System.Drawing.Size(1277, 545);
             this.pnlPrincipal.TabIndex = 35;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 541);
+            this.ClientSize = new System.Drawing.Size(1457, 579);
             this.Controls.Add(this.picLogo);
-            this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.picTopbar);
             this.Controls.Add(this.painelNavBar);
+            this.Controls.Add(this.pnlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.Text = "TelaInicial";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.painelNavBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTopbar)).EndInit();
@@ -248,5 +251,6 @@
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.PictureBox picTopbar;
         private System.Windows.Forms.Panel pnlPrincipal;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

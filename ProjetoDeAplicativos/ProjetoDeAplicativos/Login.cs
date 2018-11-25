@@ -69,11 +69,23 @@ namespace ProjetoDeAplicativos
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Principal principal = new Principal();
-            principal.Show();
-            principal.Location = Location;
-            principal.WindowState = WindowState;
-            Hide();
+            FuncionarioClass objFunc = new FuncionarioClass();
+            DataTable tablefuncs = objFunc.retFuncionarios();
+
+            for (int i = 0; i < tablefuncs.Rows.Count; i++)
+            {
+                if (txtEmail.Text == tablefuncs.Rows[i]["email"].ToString() && txtSenha.Text == tablefuncs.Rows[i]["senha"].ToString())
+                {
+                    objFunc.codFunc = tablefuncs.Rows[i]["codFuncionario"].ToString();
+                    objFunc.codTipo = int.Parse(tablefuncs.Rows[i]["codTipo"].ToString());
+                    Principal principal = new Principal(objFunc);
+                    principal.Show();
+                    principal.Location = Location;
+                    principal.WindowState = WindowState;
+                    Hide();
+                }
+            }
+            
         }
 
         private void Login_Load(object sender, EventArgs e)

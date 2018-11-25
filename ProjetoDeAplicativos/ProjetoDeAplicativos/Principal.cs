@@ -16,26 +16,18 @@ namespace ProjetoDeAplicativos
         int Y = 0;
 
         int tipoServico = 0;
-        int acao = 0;
 
         Button[] botoes;
 
+        Form[] objForm;
 
-        public Principal()
-        {
-            InitializeComponent();
-            botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico};
-            for (int i = 0; i < botoes.Length; i++)
-            {
-                int num = i;
-                botoes[num].Click += (sender, e) => atualizar(sender,e,num);
-            }
-            atualizar();
-        }
+        public static FuncionarioClass funcLogado;
 
         public Principal(FuncionarioClass funcLogado)
         {
             InitializeComponent();
+            Principal.funcLogado = funcLogado;
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal) };
             botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico };
             for (int i = 0; i < botoes.Length; i++)
             {
@@ -103,27 +95,16 @@ namespace ProjetoDeAplicativos
                 }
             }
 
-            switch (tipoServico)
-            {
-                default:
-                    //FormFuncionario objForm = FormFuncionario.InstanceForm();
-                    break;
-                case 1:
-                    //FormCliente objForm = FormCliente.InstanceForm();
-                    break;
-                case 2:
-                    //FormAnimal objForm = FormAnimal.InstanceForm();
-                    break;
-                case 3:
-                    //FormServico objForm = FormServico.InstanceForm();
-                    break;
+            objForm[tipoServico].TopLevel = false;
+            pnlPrincipal.Controls.Add(objForm[tipoServico]);
+            objForm[tipoServico].FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            objForm[tipoServico].Dock = DockStyle.Fill;
+            objForm[tipoServico].Show();
+        }
 
-                /*objForm.TopLevel = false;
-                pnlPrincipal.Controls.Add(objForm);
-                objForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                objForm.Dock = DockStyle.Fill;
-                objForm.Show();*/
-            }
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

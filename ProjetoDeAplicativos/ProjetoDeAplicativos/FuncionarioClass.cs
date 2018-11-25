@@ -58,7 +58,7 @@ namespace ProjetoDeAplicativos
         {
             DataTable tabelafuncs = retFuncionarios();
             int max = tabelafuncs.Rows.Count;
-            string codAntigo = tabelafuncs.Rows[max - 1]["'codFuncionario'"].ToString();
+            string codAntigo = tabelafuncs.Rows[max - 1]["codFuncionario"].ToString();
             codAntigo = codAntigo.Substring(4, 3);
             int numNovo = int.Parse(codAntigo) + 1;
             string numString = numNovo.ToString();
@@ -66,7 +66,7 @@ namespace ProjetoDeAplicativos
             {
                 numString = "0" + numString;
             }
-            string codNovo = "'FUNC'" + numString;
+            string codNovo = "FUNC" + numString;
             return codNovo;
         }
     }
