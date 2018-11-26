@@ -7,7 +7,7 @@ using System.Data;
 
 namespace ProjetoDeAplicativos
 {
-    class ClienteClass
+    public class ClienteClass
     {
         public string codCliente { get; set; }
         public string dataCad { get; set; }
@@ -56,16 +56,22 @@ namespace ProjetoDeAplicativos
         {
             DataTable tabelaclientes = retClientes();
             int max = tabelaclientes.Rows.Count;
-            string codAntigo = tabelaclientes.Rows[max - 1]["codCliente"].ToString();
-            codAntigo = codAntigo.Substring(4, 3);
-            int numNovo = int.Parse(codAntigo) + 1;
-            string numString = numNovo.ToString();
-            while (numString.Length<3)
+            if (max!=0)
             {
-                numString = "0" + numString;
+                string codAntigo = tabelaclientes.Rows[max - 1]["codCliente"].ToString();
+                codAntigo = codAntigo.Substring(4, 3);
+                int numNovo = int.Parse(codAntigo) + 1;
+                string numString = numNovo.ToString();
+                while (numString.Length < 3)
+                {
+                    numString = "0" + numString;
+                }
+                return "CLIC" + numString;
             }
-            string codNovo = "CLIC" + numString;
-            return codNovo;
+            else
+            {
+                return "CLIC000";
+            }
         }
     }
 }

@@ -37,7 +37,7 @@
             this.lnkRecuperarSenha = new System.Windows.Forms.LinkLabel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.picPapel = new System.Windows.Forms.PictureBox();
             this.picSombraUsuario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -175,22 +175,23 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(321, 33);
             this.txtSenha.TabIndex = 18;
-            this.txtSenha.Text = "Senha";
+            this.txtSenha.Text = "admin";
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
-            // txtUsuario
+            // txtEmail
             // 
-            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.txtUsuario.Location = new System.Drawing.Point(292, 256);
-            this.txtUsuario.MaxLength = 50;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(321, 33);
-            this.txtUsuario.TabIndex = 17;
-            this.txtUsuario.Text = "Usuário";
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.txtEmail.Location = new System.Drawing.Point(292, 256);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(321, 33);
+            this.txtEmail.TabIndex = 17;
+            this.txtEmail.Text = "admin@primopet.com";
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // picPapel
             // 
@@ -309,6 +310,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.btnEntrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(170)))), ((int)(((byte)(125)))));
@@ -326,7 +328,7 @@
             this.Controls.Add(this.lnkRecuperarSenha);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.picPapel);
             this.Controls.Add(this.picSombraUsuario);
             this.Controls.Add(this.pictureBox1);
@@ -361,7 +363,7 @@
         private System.Windows.Forms.LinkLabel lnkRecuperarSenha;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.PictureBox picPapel;
         private System.Windows.Forms.PictureBox picSombraUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;

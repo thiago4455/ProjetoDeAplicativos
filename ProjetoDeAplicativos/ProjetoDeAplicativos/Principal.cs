@@ -27,7 +27,7 @@ namespace ProjetoDeAplicativos
         {
             InitializeComponent();
             Principal.funcLogado = funcLogado;
-            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal) };
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal) };
             botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico };
             for (int i = 0; i < botoes.Length; i++)
             {
@@ -83,6 +83,7 @@ namespace ProjetoDeAplicativos
         private void atualizar()
         {
 
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal) };
             for (int i = 0; i < botoes.Length; i++)
             {
                 if (i == tipoServico)
@@ -95,6 +96,7 @@ namespace ProjetoDeAplicativos
                 }
             }
 
+            pnlPrincipal.Controls.Clear();
             objForm[tipoServico].TopLevel = false;
             pnlPrincipal.Controls.Add(objForm[tipoServico]);
             objForm[tipoServico].FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -103,6 +105,11 @@ namespace ProjetoDeAplicativos
         }
 
         private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnServico_Click(object sender, EventArgs e)
         {
 
         }

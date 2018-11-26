@@ -7,7 +7,7 @@ using System.Data;
 
 namespace ProjetoDeAplicativos
 {
-    class AnimalClass
+    public class AnimalClass
     {
 
         public string codAnimal { get; set; }
@@ -55,6 +55,10 @@ namespace ProjetoDeAplicativos
         {
             DataTable tabelaanimais = retAnimais();
             int max = tabelaanimais.Rows.Count;
+            if (max==0)
+            {
+                return "ANI000";
+            }
             string codAntigo = tabelaanimais.Rows[max - 1]["'codAnimal'"].ToString();
             codAntigo = codAntigo.Substring(4, 3);
             int numNovo = int.Parse(codAntigo) + 1;

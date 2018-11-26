@@ -59,9 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendaExecClass.cs" />
+    <Compile Include="AnimalClass.cs" />
     <Compile Include="ClasseDB.cs" />
     <Compile Include="ClienteClass.cs" />
-    <Compile Include="Funcionario.cs" />
+    <Compile Include="FuncionarioClass.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +77,79 @@
     </Compile>
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicoClass.cs" />
+    <Compile Include="SubForms\AnimalEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AnimalEdit.Designer.cs">
+      <DependentUpon>AnimalEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ClienteEdit .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ClienteEdit .Designer.cs">
+      <DependentUpon>ClienteEdit .cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AnimalInserir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AnimalInserir.Designer.cs">
+      <DependentUpon>AnimalInserir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ClienteInserir .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ClienteInserir .Designer.cs">
+      <DependentUpon>ClienteInserir .cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AnimalRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AnimalRow.Designer.cs">
+      <DependentUpon>AnimalRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AnimalTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AnimalTable.Designer.cs">
+      <DependentUpon>AnimalTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioInserir .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioInserir .Designer.cs">
+      <DependentUpon>FuncionarioInserir .cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioEdit.Designer.cs">
+      <DependentUpon>FuncionarioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ClienteRow .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ClienteRow .Designer.cs">
+      <DependentUpon>ClienteRow .cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioRow.Designer.cs">
+      <DependentUpon>FuncionarioRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ClienteTable .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ClienteTable .Designer.cs">
+      <DependentUpon>ClienteTable .cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\FuncionarioTable.Designer.cs">
+      <DependentUpon>FuncionarioTable.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -90,6 +165,42 @@
     </Compile>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AnimalEdit.resx">
+      <DependentUpon>AnimalEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ClienteEdit .resx">
+      <DependentUpon>ClienteEdit .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AnimalInserir.resx">
+      <DependentUpon>AnimalInserir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ClienteInserir .resx">
+      <DependentUpon>ClienteInserir .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AnimalRow.resx">
+      <DependentUpon>AnimalRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AnimalTable.resx">
+      <DependentUpon>AnimalTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FuncionarioInserir .resx">
+      <DependentUpon>FuncionarioInserir .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FuncionarioEdit.resx">
+      <DependentUpon>FuncionarioEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ClienteRow .resx">
+      <DependentUpon>ClienteRow .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FuncionarioRow.resx">
+      <DependentUpon>FuncionarioRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ClienteTable .resx">
+      <DependentUpon>ClienteTable .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\FuncionarioTable.resx">
+      <DependentUpon>FuncionarioTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

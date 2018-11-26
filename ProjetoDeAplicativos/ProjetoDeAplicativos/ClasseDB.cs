@@ -16,7 +16,7 @@ namespace ProjetoDeAplicativos
         {
             string servidor = "localhost";
             string db = "dbPrimoPet";
-            conn = new MySqlConnection(String.Format("server={0};Initial Catalog={1};Integrated Security=SSPI", servidor, db));
+            conn = new MySqlConnection(String.Format("Server={0};Database={1};Uid=root", servidor, db));
         }
 
         public void ExecutarComando(string comando)
