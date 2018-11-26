@@ -50,26 +50,22 @@ session_start();
             <div id="featured">
                 <div class="container">
                     <div class="title">    
-                        <h2>Área dos animais</h2>
+                        <h2>Para seus animais</h2>
                         <span class="byline"></span> </div>
                     <p>A <strong> PrimoPet</strong> , possui para seus animais de estimação as melhores rações e serviços para manter seu animal bem e saudáveis.</p>
                 </div>
-                <ul class="actions">
-                    <li><a href="animais.php" class="button">Animais</a></li>
-                </ul>
+                
             </div>
             <div id="extra">
                 <div class="container">
                     <div class="title">
-                        <h2>Serviços</h2>
-                        <span class="byline"> Informações sobre os serviços da Primo Pet</span> </div>
+                        <h2>Nossos serviços</h2>
+                        </div>
                     <p align="center">A <strong> PrimoPet</strong> oferece diversos serviços para cuidar do seu pet, seja de maneira estética como também existe veterinários preparados para tratar de qualquer problema. </p>
                 </div>
             </div>
             <div>
-                <ul class="actions">
-                    <li><a href="servico.php" class="button">Consulte na área de serviços</a></li>
-                </ul>
+                
             </div>
 
         </div>

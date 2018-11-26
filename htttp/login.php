@@ -23,62 +23,61 @@ $_SESSION["userType"] = "";
         <div id="wrapper">
             <div id="header" class="container">
                 <div id="logo">
-                <a href="./"><img width="200px" src="assets/img/logo-primopet.png"/></a>
+                    <a href="./"><img width="200px" src="assets/img/logo-primopet.png"/></a>
                 </div>
                 <div id="menu">
                     <ul>
                         <li><a href="index.php" accesskey="1" title="">Home</a></li>
                         <li class="current_page_item"><a href="#" accesskey="2" title="">Login</a></li>
-                        
+
                     </ul>
                 </div>
                 <br/><br/><br/>
                 <div class='alinharCentro'>
                     <form action="" method="post" class="formLogin">
-                        
+
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email </label>
                             <input type="email" class="form-control" id="email" name='email' aria-describedby="emailHelp" placeholder="Email">
-                            
+
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Senha</label>
                             <input type="password" class="form-control" id="passwd" name='passwd' placeholder="Senha">
                         </div>                                                                                                
-                        
+
                         <button type="submit" class="btn btn-primary verde" name='enviar'>Logar</button>
 
-                         
-                         <div>
+
+                        <div>
                             <p>Esqueceu sua senha? Recupere já <a href='recuperarSenha.php'>clicando aqui</a> </p>
                         </div>
 
-            <?php 
-                require_once('class/FuncionarioClass.php');
-                $objFunc = new FuncionarioClass();
+                        <?php
+                        require_once('class/FuncionarioClass.php');
+                        $objFunc = new FuncionarioClass();
 
-                if (isset($_POST['enviar'])) {
-                    $tablefuncs = $objFunc->retFuncionarios();
+                        if (isset($_POST['enviar'])) {
+                            $tablefuncs = $objFunc->retFuncionarios();
+                            $max = sizeof($tablefuncs);
 
-                    $max = sizeof($tablefuncs);
-
-                    for ($i = 0; $i < $max; $i++) {
-                        if(($_POST['email'] == $tablefuncs[$i]["email"]) && ($_POST['passwd'] == $tablefuncs[$i]["senha"])){
-                            $_SESSION["userId"] = $tablefuncs[$i]["codFuncionario"];
-                            $_SESSION["userType"] = $tablefuncs[$i]["codTipo"];
-                            header('Location: index.php');
-                        }
-                        else{
                             $_SESSION["userId"] = "";
                             $_SESSION["userType"] = "";
+                            for ($i = 0; $i < $max; $i++) {
+                                if (($_POST['email'] == $tablefuncs[$i]["email"]) && ($_POST['passwd'] == $tablefuncs[$i]["senha"])) {
+                                    $_SESSION["userId"] = $tablefuncs[$i]["codFuncionario"];
+                                    $_SESSION["userType"] = $tablefuncs[$i]["codTipo"];
+                                }
+                            }
+                            if ($_SESSION['userId'] != "") {
+                                header('Location: index.php');
+                            }
+                            echo '<p style="color: #fc5050;">Usuário / Senha incorretos<p>';
                         }
-                    }
-                    echo   '<p style="color: #fc5050;">Usuário / Senha incorretos<p>';
-                }
-                ?>                    
+                        ?>                    
 
                     </form>
                 </div>
 
             </div>
-            </body>
+    </body>

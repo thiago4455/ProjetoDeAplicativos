@@ -6,6 +6,11 @@ session_start();
 if ($_SESSION["userId"] == "") {
     header('Location: login.php');
 }
+
+function  retData(){
+    $today = getdate();
+    return $today['mday'].'/'.$today['mon'].'/'.$today['year'];
+}
 ?>
 <html>
     <head>
@@ -70,7 +75,7 @@ if ($_SESSION["userId"] == "") {
                     $objAgendaExec = new AgendaExecClass();
                     $tableAgendaExec = $objAgendaExec->retAgendaExec();
                     $max = sizeof($tableAgendaExec);
-
+if ($tableAgendaExec!=""){
                     $agenda = array();
 
                     for ($i = 0; $i < $max; $i++) {
@@ -90,13 +95,13 @@ if ($_SESSION["userId"] == "") {
                         echo '<form action="" method="post">';
                         echo '<td>' . $agenda[$i]->getCodAgendamento() . '</td>';
                         if (isset($_POST['edit' . $i])) {
-                            echo '<td class="form-group"><input class="form-control iptDataPrevista" id="iptDataPrevista" name="iptDataPrevista" placeholder="Data Prevista" value="' . $agenda[$i]->getDataPrevista() . '"></td>';
+                            echo '<td class="form-group"><input type="date" max="'.retData().'." class="form-control iptDataPrevista" id="iptDataPrevista" name="iptDataPrevista" placeholder="Data Prevista" value="' .$agenda[$i]->getDataPrevista().'"></td>';
                             echo '<td class="form-group"><input class="form-control iptHoraPrevista" id="iptHoraPrevista" name="iptHoraPrevista" placeholder="Hora Prevista" value="' . $agenda[$i]->getHoraPrevista() . '"></td>';
                             echo '<td class="form-group"><input class="form-control iptObs" id="iptObs" name="iptObs" placeholder="Observações" value="' . $agenda[$i]->getObs() . '"></td>';
                             echo '<td class="form-group"><input class="form-control iptCodAnimal" id="iptCodAnimal" name="iptCodAnimal" placeholder="Cod Animal" value="' . $agenda[$i]->getCodAnimal() . '"></td>';
                             echo '<td class="form-group"><input class="form-control iptCodServico" id="iptCodServico" name="iptCodServico" placeholder="Cod Serviço" value="' . $agenda[$i]->getCodServico() . '"></td>';
                             echo '<td class="form-group"><input class="form-control iptCodVeterinario" id="iptCodVeterinario" name="iptCodVeterinario" placeholder="Cod Veterinário" value="' . $agenda[$i]->getCodVeterinario() . '"></td>';
-                            echo '<td class="form-group"><input class="form-control iptDataExecucao" id="iptDataExecucao" name="iptDataExecucao" placeholder="Data Execução" value="' . $agenda[$i]->getDataExecucao() . '"></td>';
+                            echo '<td class="form-group"><input type="date" max="'.retData().'." class="form-control iptDataExecucao" id="iptDataExecucao" name="iptDataExecucao" placeholder="Data Execução" value="' . $agenda[$i]->getDataExecucao() . '"></td>';
                             echo '<td class="form-group"><input class="form-control iptHoraExecucao" id="iptHoraExecucao" name="iptHoraExecucao" placeholder="Hora Execução" value="' . $agenda[$i]->getHoraExecucao() . '"></td>';
                             
                             echo '<input type="hidden" name="codAgendamento" value="' . $i . '">';
@@ -122,6 +127,7 @@ if ($_SESSION["userId"] == "") {
                         echo '<tr>';
                         echo '<!--' . $agenda[$i]->getCodAgendamento() . '_END-->';
                     }
+}
                     ?>
                     <?php
                     require_once('class/AgendaExecClass.php');
@@ -137,13 +143,13 @@ if ($_SESSION["userId"] == "") {
                     <form action="" method="post">
                         <td class="form-group"><?php $objAgendaExec = new AgendaExecClass();
                         echo $objAgendaExec->retProxCodAgendamento(); ?></td>                            
-                        <td class="form-group"><input class="form-control iptDataPrevista" id="iptDataPrevista" name="iptDataPrevista" placeholder="Data Prevista"></td>
+                        <td class="form-group"><input type='date' max="<?php echo retData(); ?>" class="form-control iptDataPrevista" id="iptDataPrevista" name="iptDataPrevista" placeholder="Data Prevista"></td>
                         <td class="form-group"><input class="form-control iptHoraPrevista" id="iptHoraPrevista" name="iptHoraPrevista" placeholder="Hora Prevista"></td>
                         <td class="form-group"><input class="form-control iptObs" id="iptObs" name="iptObs" placeholder="Observações"></td>
                         <td class="form-group"><input class="form-control iptCodAnimal" id="iptCodAnimal" name="iptCodAnimal" placeholder="Cod Animal"></td>
                         <td class="form-group"><input class="form-control iptCodServico" id="iptCodServico" name="iptCodServico" placeholder="Cod Serviço"></td>
                         <td class="form-group"><input class="form-control iptCodVeterinario" id="iptCodVeterinario" name="iptCodVeterinario" placeholder="Cod Veterinário"></td>
-                        <td class="form-group"><input class="form-control iptDataExecucao" id="iptDataExecucao" name="iptDataExecucao" placeholder="Data Execução"></td>
+                        <td class="form-group"><input type='date' max="<?php echo retData(); ?>" class="form-control iptDataExecucao" id="iptDataExecucao" name="iptDataExecucao" placeholder="Data Execução"></td>
                         <td class="form-group"><input class="form-control iptHoraExecucao" id="iptHoraExecucao" name="iptHoraExecucao" placeholder="Hora Execução"></td>                                                                               
                         <td class="iconesInserir"><button type="submit" value="submit request" class="fas fa-check btnIns" name="inserir"></td>
                     </form>                   
@@ -187,14 +193,14 @@ if ($_SESSION["userId"] == "") {
                                             $codNovo = $_POST['codEdit'];
 
                                             $objAgendaExec->setCodAgendamento($codNovo);
-                                            $agenda[$i]->setDataPrevista($tableAgendaExec[$i]['dataPrevista']);
-                                            $agenda[$i]->setHoraPrevista($tableAgendaExec[$i]['horaPrevista']);
-                                            $agenda[$i]->setObs($tableAgendaExec[$i]['observacoes']);
-                                            $agenda[$i]->setCodAnimal($tableAgendaExec[$i]['codAnimal']);
-                                            $agenda[$i]->setCodServico($tableAgendaExec[$i]['codServico']);
-                                            $agenda[$i]->setCodVeterinario($tableAgendaExec[$i]['codVeterinario']);
-                                            $agenda[$i]->setDataExecucao($tableAgendaExec[$i]['dataExecucao']);
-                                            $agenda[$i]->setHoraExecucao($tableAgendaExec[$i]['horaExecucao']);
+                                            $objAgendaExec->setDataPrevista(str_replace('-','/',$_POST['iptDataPrevista']));
+                                            $objAgendaExec->setHoraPrevista($_POST['iptHoraPrevista']);
+                                            $objAgendaExec->setObs($_POST['iptObs']);
+                                            $objAgendaExec->setCodAnimal($_POST['iptCodAnimal']);
+                                            $objAgendaExec->setCodServico($_POST['iptCodServico']);
+                                            $objAgendaExec->setCodVeterinario($_POST['iptCodVeterinario']);
+                                            $objAgendaExec->setDataExecucao(str_replace('-','/',$_POST['iptDataExecucao']));
+                                            $objAgendaExec->setHoraExecucao($_POST['iptHoraExecucao']);
 
                                             $objAgendaExec->editarAgendaExec($objAgendaExec);
                                             echo '<meta http-equiv="refresh" content="0">';
@@ -220,7 +226,7 @@ if ($_SESSION["userId"] == "") {
                         $objServico = new ServicoClass();
                         $tableServicos = $objServico->retServicos();
                         $max = sizeof($tableServicos);
-
+if ($tableServicos!=""){
                         $servicos = array();
 
                         for ($i = 0; $i < $max; $i++) {
@@ -258,6 +264,7 @@ if ($_SESSION["userId"] == "") {
                             echo '<tr>';
                             echo '<!--'.$servicos[$i]->getCodServico().'_END-->';
                         }
+}
                     ?>
                     <?php
                     require_once('class/ServicoClass.php');

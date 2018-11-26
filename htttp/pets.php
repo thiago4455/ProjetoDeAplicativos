@@ -64,25 +64,14 @@ if ($_SESSION["userId"] == "") {
                             <th>Comportamento</th>                                                               
                         </tr>
                     </thead>
-                            <tr>
-                                <td>ANI001</td> 
-                                <td>CLIC001</td>                                                  
-                                <td>Cretácio</td>                           
-                                <td>2005</td>                           
-                                <td>5KG</td>                                                                                                 
-                                <td>Cães</td>                                                  
-                                <td>Vira-lata</td>                                                   
-                                <td>Macho</td>                                                   
-                                <td>1</td>                                                                        
-                                <td>Tranquilo</td>                                                      
-                            </tr>
+                            
 
                             <?php
                                 require_once('class/AnimalClass.php');
                                 $objAnimal = new AnimalClass();
                                 $tableAnimal = $objAnimal->retAnimais();
                                 $max = sizeof($tableAnimal);
-
+if ($tableAnimal!=""){
                                 $animais = array();
 
                                 for ($i = 0; $i < $max; $i++) {
@@ -139,6 +128,7 @@ if ($_SESSION["userId"] == "") {
                                     echo '<tr>';
                                     echo '<!--'.$animais[$i]->getCodAnimal().'_END-->';
                                 }
+}
                             ?>
                             <?php
                             require_once('class/AnimalClass.php');

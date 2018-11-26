@@ -78,7 +78,7 @@ function  retData(){
                         $objCliente = new ClienteClass();
                         $tableclientes = $objCliente->retClientes();
                         $max = sizeof($tableclientes);
-
+if ($tableclientes!=""){
                         $clientes = array();
 
                         for ($i = 0; $i < $max; $i++) {
@@ -137,6 +137,7 @@ function  retData(){
                             echo '<tr>';
                             echo '<!--'.$clientes[$i]->getCod().'_END-->';
                         }
+}
                     ?>
                     <?php
                     require_once('class/ClienteClass.php');
