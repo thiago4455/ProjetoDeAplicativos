@@ -172,6 +172,7 @@ class ClienteClass {
         require_once('class/ConexaoClass.php');
         $objConexao = new ConexaoClass("localhost", "root", "", "dbPrimoPet");   
         
+        $objConexao->exercutarComandoSQL("DELETE FROM Animal WHERE Cliente_codCliente = '$codCliente'");
         $objConexao->exercutarComandoSQL("DELETE FROM Cliente WHERE codCliente='$codCliente'");               
 
         return true;
@@ -179,6 +180,10 @@ class ClienteClass {
 
     public function retProxCodCliente(){
         $tableclientes = $this->retClientes();
+        if ($tableclientes == "") {
+            $codNovo = 'CLIC000';
+        }
+        else{
         $max = sizeof($tableclientes);
         $codAntigo  = $tableclientes[$max-1]['codCliente'];
         $codAntigo = substr($codAntigo,4,3);
@@ -188,6 +193,7 @@ class ClienteClass {
             $numString = '0'.$numString;
         }
         $codNovo = 'CLIC'.$numString;
+        }
         return $codNovo;
     }
 }

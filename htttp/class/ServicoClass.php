@@ -90,6 +90,10 @@ class ServicoClass {
     
     public function retProxCodServico(){
         $tableclientes = $this->retServicos();
+        if ($tableclientes == "") {
+            $codNovo = 'SER000';
+        }
+        else{
         $max = sizeof($tableclientes);
         $codAntigo  = $tableclientes[$max-1]['codServico'];
         $codAntigo = substr($codAntigo,4,3);
@@ -99,6 +103,7 @@ class ServicoClass {
             $numString = '0'.$numString;
         }
         $codNovo = 'SER'.$numString;
+        }
         return $codNovo;
     }
 }

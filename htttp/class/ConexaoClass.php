@@ -28,8 +28,13 @@ class ConexaoClass extends MySQLi {
             while ($row = $result->fetch_assoc()) {
                 $data[$index] = $row;
                 $index++;
-            }            
+            }
+            if(isset($data)){
             return $data;
+            }
+            else{
+                return "";
+            }
         }
     }
     //para insert, delete, update

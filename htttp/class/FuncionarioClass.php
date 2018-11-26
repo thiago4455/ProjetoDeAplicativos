@@ -198,8 +198,13 @@ class FuncionarioClass {
 
         return true;
     }
+    
     public function retProxCodFunc(){
         $tableclientes = $this->retFuncionarios();
+        if ($tableclientes == "") {
+            $codNovo = 'FUNC000';
+        }
+        else{
         $max = sizeof($tableclientes);
         $codAntigo  = $tableclientes[$max-1]['codFuncionario'];
         $codAntigo = substr($codAntigo,4,3);
@@ -209,6 +214,7 @@ class FuncionarioClass {
             $numString = '0'.$numString;
         }
         $codNovo = 'FUNC'.$numString;
+        }
         return $codNovo;
     }
 }

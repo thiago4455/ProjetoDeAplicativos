@@ -156,8 +156,13 @@ class AnimalClass {
         return true;
     }
 
+    
     public function retProxCodAnimal(){
         $tableclientes = $this->retAnimais();
+        if ($tableclientes == "") {
+            $codNovo = 'ANI000';
+        }
+        else{
         $max = sizeof($tableclientes);
         $codAntigo  = $tableclientes[$max-1]['codAnimal'];
         $codAntigo = substr($codAntigo,4,3);
@@ -167,6 +172,7 @@ class AnimalClass {
             $numString = '0'.$numString;
         }
         $codNovo = 'ANI'.$numString;
+        }
         return $codNovo;
     }
 }

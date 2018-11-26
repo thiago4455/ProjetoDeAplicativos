@@ -140,8 +140,13 @@ class AgendaExecClass {
         return true;
     }
     
+    
     public function retProxCodAgendamento(){
         $tableclientes = $this->retAgendaExec();
+        if ($tableclientes == "") {
+            $codNovo = 'AGE000';
+        }
+        else{
         $max = sizeof($tableclientes);
         $codAntigo  = $tableclientes[$max-1]['codAgendamento'];
         $codAntigo = substr($codAntigo,4,3);
@@ -151,6 +156,7 @@ class AgendaExecClass {
             $numString = '0'.$numString;
         }
         $codNovo = 'AGE'.$numString;
+        }
         return $codNovo;
     }
 }
