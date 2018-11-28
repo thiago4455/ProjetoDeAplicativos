@@ -119,7 +119,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1279, 58);
+            this.panel1.Size = new System.Drawing.Size(1280, 58);
             this.panel1.TabIndex = 3;
             // 
             // label13
@@ -371,7 +371,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(870, 500);
+            this.btnSalvar.Location = new System.Drawing.Point(871, 483);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(244, 42);
             this.btnSalvar.TabIndex = 139;
@@ -383,6 +383,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1277, 545);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.pnlTable);

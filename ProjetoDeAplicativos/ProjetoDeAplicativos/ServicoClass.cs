@@ -7,7 +7,7 @@ using System.Data;
 
 namespace ProjetoDeAplicativos
 {
-    class ServicoClass
+    public class ServicoClass
     {
         public string codServico { get; set; }
         public string nome { get; set; }
@@ -43,8 +43,10 @@ namespace ProjetoDeAplicativos
         {
             DataTable tableservicos = retServicos();
             int max = tableservicos.Rows.Count;
-            string codAntigo = tableservicos.Rows[max - 1]["codServico"].ToString();
-            codAntigo = codAntigo.Substring(4, 3);
+            if (max == 0)
+                return "SER000";
+                string codAntigo = tableservicos.Rows[max - 1]["codServico"].ToString();
+            codAntigo = codAntigo.Substring(3, 3);
             int numNovo = int.Parse(codAntigo) + 1;
             string numString = numNovo.ToString();
             while (numString.Length < 3)

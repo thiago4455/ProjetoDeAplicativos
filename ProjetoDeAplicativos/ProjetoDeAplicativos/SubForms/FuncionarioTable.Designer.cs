@@ -97,8 +97,6 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(170)))), ((int)(((byte)(125)))));
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.pictureBox13);
@@ -411,6 +409,7 @@
             // 
             // pnlTable
             // 
+            this.pnlTable.AutoScroll = true;
             this.pnlTable.Location = new System.Drawing.Point(-1, 58);
             this.pnlTable.Name = "pnlTable";
             this.pnlTable.Size = new System.Drawing.Size(1279, 438);
@@ -418,16 +417,16 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(170)))), ((int)(((byte)(125)))));
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(870, 500);
+            this.btnSalvar.Location = new System.Drawing.Point(809, 500);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(244, 42);
+            this.btnSalvar.Size = new System.Drawing.Size(189, 42);
             this.btnSalvar.TabIndex = 139;
             this.btnSalvar.Text = "Inserir Funcionario";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -437,13 +436,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 545);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1280, 545);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.pnlTable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FuncionarioTable";
             this.Text = "FuncionarioTable";
+            this.Scroll += new System.Windows.Forms.ScrollEventHandler(this.FuncionarioTable_Scroll);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

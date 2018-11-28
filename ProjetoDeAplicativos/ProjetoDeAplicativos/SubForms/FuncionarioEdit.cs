@@ -69,6 +69,7 @@ namespace ProjetoDeAplicativos.SubForms
             painel.Controls.Clear();
             objForm.TopLevel = false;
             painel.Controls.Add(objForm);
+            objForm.Dock = DockStyle.Fill;
             objForm.Show();
         }
     }

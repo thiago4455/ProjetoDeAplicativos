@@ -80,10 +80,10 @@ namespace ProjetoDeAplicativos
             atualizar();
         }
 
-        private void atualizar()
+        public void atualizar()
         {
 
-            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal) };
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal) };
             for (int i = 0; i < botoes.Length; i++)
             {
                 if (i == tipoServico)
