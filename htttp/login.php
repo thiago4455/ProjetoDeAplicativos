@@ -3,7 +3,6 @@
 // Start the session
 session_start();
 
-
 $_SESSION["userId"] = "";
 $_SESSION["userType"] = "";
 ?>
@@ -44,17 +43,15 @@ $_SESSION["userType"] = "";
                         <div class="form-group">
                             <label for="exampleInputPassword1">Senha</label>
                             <input type="password" class="form-control" id="passwd" name='passwd' placeholder="Senha">
-                        </div>                                                                                                
+                        </div>
 
                         <button type="submit" class="btn btn-primary verde" name='enviar'>Logar</button>
 
 
-                        <div>
-                            <p>Esqueceu sua senha? Recupere já <a href='recuperarSenha.php'>clicando aqui</a> </p>
-                        </div>
+
 
                         <?php
-                        require_once('class/FuncionarioClass.php');
+                        require_once 'class/FuncionarioClass.php';
                         $objFunc = new FuncionarioClass();
 
                         if (isset($_POST['enviar'])) {
@@ -74,10 +71,35 @@ $_SESSION["userType"] = "";
                             }
                             echo '<p style="color: #fc5050;">Usuário / Senha incorretos<p>';
                         }
-                        ?>                    
+                        ?>
 
                     </form>
+                    <div>
+                            <p>Esqueceu sua senha? Recupere já <a href='#' onclick="abrirRecuperar()" >clicando aqui</a> </p>
+                    </div>
+
+                        <div class="recuperarEmail" id="recuperarEmail" style="display: none;">
+                            <div class="msgRecuperarEmail">Insira seu email:</div>
+                            <div class="input-group mb-3 botaoRecuperarEmail">
+                                <input class="form-control" type="email" id="emailRec" name='emailRec' placeholder="Email">
+                                <button style="margin-left: 5%;" class="btn">Enviar</button>
+                            </div>
+                        </div>
                 </div>
 
             </div>
+            <script>
+
+                function abrirRecuperar(){
+                    rec = document.getElementById("recuperarEmail");
+
+                    if (rec.style.display == 'none'){
+                        rec.style.display = 'block';
+                    }
+                    else {
+                        rec.style.display = 'none';
+                    }
+                }
+
+            </script>
     </body>
