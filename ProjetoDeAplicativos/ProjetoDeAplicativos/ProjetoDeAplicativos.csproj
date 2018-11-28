@@ -115,6 +115,18 @@
     <Compile Include="SubForms\AnimalTable.Designer.cs">
       <DependentUpon>AnimalTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForms\ServicoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ServicoEdit.Designer.cs">
+      <DependentUpon>ServicoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ServicoInserir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ServicoInserir.Designer.cs">
+      <DependentUpon>ServicoInserir.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForms\FuncionarioInserir .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +145,12 @@
     <Compile Include="SubForms\ClienteRow .Designer.cs">
       <DependentUpon>ClienteRow .cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForms\ServicoRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ServicoRow.Designer.cs">
+      <DependentUpon>ServicoRow.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForms\FuncionarioRow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +162,12 @@
     </Compile>
     <Compile Include="SubForms\ClienteTable .Designer.cs">
       <DependentUpon>ClienteTable .cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ServicoTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ServicoTable.Designer.cs">
+      <DependentUpon>ServicoTable.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForms\FuncionarioTable.cs">
       <SubType>Form</SubType>
@@ -184,6 +208,12 @@
     <EmbeddedResource Include="SubForms\AnimalTable.resx">
       <DependentUpon>AnimalTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ServicoEdit.resx">
+      <DependentUpon>ServicoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ServicoInserir.resx">
+      <DependentUpon>ServicoInserir.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForms\FuncionarioInserir .resx">
       <DependentUpon>FuncionarioInserir .cs</DependentUpon>
     </EmbeddedResource>
@@ -193,11 +223,17 @@
     <EmbeddedResource Include="SubForms\ClienteRow .resx">
       <DependentUpon>ClienteRow .cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ServicoRow.resx">
+      <DependentUpon>ServicoRow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForms\FuncionarioRow.resx">
       <DependentUpon>FuncionarioRow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\ClienteTable .resx">
       <DependentUpon>ClienteTable .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ServicoTable.resx">
+      <DependentUpon>ServicoTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\FuncionarioTable.resx">
       <DependentUpon>FuncionarioTable.cs</DependentUpon>

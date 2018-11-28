@@ -214,7 +214,7 @@
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox6.Location = new System.Drawing.Point(730, 85);
+            this.pictureBox6.Location = new System.Drawing.Point(634, 85);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(377, 2);
             this.pictureBox6.TabIndex = 128;
@@ -227,7 +227,7 @@
             this.endereco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.endereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.endereco.Location = new System.Drawing.Point(730, 55);
+            this.endereco.Location = new System.Drawing.Point(634, 55);
             this.endereco.MaxLength = 50;
             this.endereco.Name = "endereco";
             this.endereco.Size = new System.Drawing.Size(377, 22);
@@ -238,7 +238,7 @@
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox7.Location = new System.Drawing.Point(730, 133);
+            this.pictureBox7.Location = new System.Drawing.Point(634, 133);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(377, 2);
             this.pictureBox7.TabIndex = 130;
@@ -251,7 +251,7 @@
             this.bairro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.bairro.Location = new System.Drawing.Point(730, 103);
+            this.bairro.Location = new System.Drawing.Point(634, 103);
             this.bairro.MaxLength = 50;
             this.bairro.Name = "bairro";
             this.bairro.Size = new System.Drawing.Size(377, 22);
@@ -262,7 +262,7 @@
             // 
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox8.Location = new System.Drawing.Point(730, 182);
+            this.pictureBox8.Location = new System.Drawing.Point(634, 182);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(377, 2);
             this.pictureBox8.TabIndex = 132;
@@ -275,7 +275,7 @@
             this.cidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.cidade.Location = new System.Drawing.Point(730, 152);
+            this.cidade.Location = new System.Drawing.Point(634, 152);
             this.cidade.MaxLength = 50;
             this.cidade.Name = "cidade";
             this.cidade.Size = new System.Drawing.Size(377, 22);
@@ -286,7 +286,7 @@
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox9.Location = new System.Drawing.Point(730, 278);
+            this.pictureBox9.Location = new System.Drawing.Point(634, 278);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(377, 2);
             this.pictureBox9.TabIndex = 134;
@@ -299,7 +299,7 @@
             this.pais.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pais.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pais.Location = new System.Drawing.Point(730, 248);
+            this.pais.Location = new System.Drawing.Point(634, 248);
             this.pais.MaxLength = 50;
             this.pais.Name = "pais";
             this.pais.Size = new System.Drawing.Size(377, 22);
@@ -311,7 +311,7 @@
             this.tipo.AutoSize = true;
             this.tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.tipo.Location = new System.Drawing.Point(730, 296);
+            this.tipo.Location = new System.Drawing.Point(634, 296);
             this.tipo.Name = "tipo";
             this.tipo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tipo.Size = new System.Drawing.Size(145, 28);
@@ -328,7 +328,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(285, 423);
+            this.btnCancelar.Location = new System.Drawing.Point(98, 423);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(323, 42);
             this.btnCancelar.TabIndex = 137;
@@ -345,7 +345,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(630, 423);
+            this.btnSalvar.Location = new System.Drawing.Point(634, 423);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(323, 42);
             this.btnSalvar.TabIndex = 138;
@@ -357,7 +357,7 @@
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox10.Location = new System.Drawing.Point(730, 230);
+            this.pictureBox10.Location = new System.Drawing.Point(634, 230);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(377, 2);
             this.pictureBox10.TabIndex = 141;
@@ -370,7 +370,7 @@
             this.estado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.estado.Location = new System.Drawing.Point(730, 200);
+            this.estado.Location = new System.Drawing.Point(634, 200);
             this.estado.MaxLength = 50;
             this.estado.Name = "estado";
             this.estado.Size = new System.Drawing.Size(377, 22);

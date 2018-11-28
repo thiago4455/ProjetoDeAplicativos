@@ -67,7 +67,16 @@ namespace ProjetoDeAplicativos.SubForms
             painel.Controls.Clear();
             objEdit.TopLevel = false;
             painel.Controls.Add(objEdit);
+            objEdit.Dock = DockStyle.Fill;
             objEdit.Show();
+        }
+
+        private void FuncionarioTable_Scroll(object sender, ScrollEventArgs e)
+        {
+            if(e.ScrollOrientation == ScrollOrientation.HorizontalScroll)
+            {
+                btnSalvar.Location = new Point((btnSalvar.Location.X + (e.NewValue-e.OldValue)), btnSalvar.Location.Y);
+            }
         }
     }
 }

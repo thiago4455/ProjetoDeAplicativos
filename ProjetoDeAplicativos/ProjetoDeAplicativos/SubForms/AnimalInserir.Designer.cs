@@ -66,7 +66,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(285, 423);
+            this.btnCancelar.Location = new System.Drawing.Point(94, 423);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(323, 42);
             this.btnCancelar.TabIndex = 137;
@@ -218,7 +218,7 @@
             this.raca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.raca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.raca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.raca.Location = new System.Drawing.Point(726, 113);
+            this.raca.Location = new System.Drawing.Point(630, 95);
             this.raca.MaxLength = 50;
             this.raca.Name = "raca";
             this.raca.Size = new System.Drawing.Size(381, 22);
@@ -229,7 +229,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox1.Location = new System.Drawing.Point(726, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(630, 125);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(381, 2);
             this.pictureBox1.TabIndex = 153;
@@ -242,7 +242,7 @@
             this.genero.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.genero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.genero.Location = new System.Drawing.Point(726, 161);
+            this.genero.Location = new System.Drawing.Point(630, 143);
             this.genero.MaxLength = 50;
             this.genero.Name = "genero";
             this.genero.Size = new System.Drawing.Size(381, 22);
@@ -253,7 +253,7 @@
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox7.Location = new System.Drawing.Point(726, 191);
+            this.pictureBox7.Location = new System.Drawing.Point(630, 173);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(381, 2);
             this.pictureBox7.TabIndex = 155;
@@ -266,7 +266,7 @@
             this.comportamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.comportamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comportamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.comportamento.Location = new System.Drawing.Point(726, 258);
+            this.comportamento.Location = new System.Drawing.Point(630, 240);
             this.comportamento.MaxLength = 50;
             this.comportamento.Name = "comportamento";
             this.comportamento.Size = new System.Drawing.Size(381, 22);
@@ -277,7 +277,7 @@
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox10.Location = new System.Drawing.Point(726, 288);
+            this.pictureBox10.Location = new System.Drawing.Point(630, 270);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(381, 2);
             this.pictureBox10.TabIndex = 159;
@@ -288,7 +288,7 @@
             this.vacinacao.AutoSize = true;
             this.vacinacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.vacinacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.vacinacao.Location = new System.Drawing.Point(726, 213);
+            this.vacinacao.Location = new System.Drawing.Point(630, 195);
             this.vacinacao.Name = "vacinacao";
             this.vacinacao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.vacinacao.Size = new System.Drawing.Size(118, 28);

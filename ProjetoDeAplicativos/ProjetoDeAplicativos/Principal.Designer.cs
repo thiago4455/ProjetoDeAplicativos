@@ -210,7 +210,6 @@
             this.pnlPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlPrincipal.AutoScroll = true;
             this.pnlPrincipal.AutoSize = true;
             this.pnlPrincipal.Location = new System.Drawing.Point(172, 29);
             this.pnlPrincipal.Name = "pnlPrincipal";
