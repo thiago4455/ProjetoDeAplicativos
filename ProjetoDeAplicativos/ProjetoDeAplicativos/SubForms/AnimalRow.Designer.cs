@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.comportamento = new System.Windows.Forms.Label();
             this.vacinacao = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.Cliente_codCliente = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.codAnimal = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -59,15 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox11.Location = new System.Drawing.Point(1108, 1);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(1, 30);
-            this.pictureBox11.TabIndex = 22;
-            this.pictureBox11.TabStop = false;
             // 
             // pictureBox10
             // 
@@ -287,7 +276,6 @@
             this.Controls.Add(this.codAnimal);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Cliente_codCliente);
-            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.dataNasc);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox2);
@@ -308,7 +296,6 @@
             this.Name = "AnimalRow";
             this.Text = "FuncionarioRow";
             this.Load += new System.EventHandler(this.ClienteRow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -324,7 +311,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label comportamento;
         private System.Windows.Forms.Label vacinacao;

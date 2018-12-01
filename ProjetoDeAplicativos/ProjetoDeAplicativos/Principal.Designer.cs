@@ -42,6 +42,7 @@
             this.picTopbar = new System.Windows.Forms.PictureBox();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnAgendamento = new System.Windows.Forms.Button();
             this.painelNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTopbar)).BeginInit();
@@ -52,6 +53,7 @@
             this.painelNavBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.painelNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(170)))), ((int)(((byte)(125)))));
+            this.painelNavBar.Controls.Add(this.btnAgendamento);
             this.painelNavBar.Controls.Add(this.btnServico);
             this.painelNavBar.Controls.Add(this.btnAnimal);
             this.painelNavBar.Controls.Add(this.btnCliente);
@@ -69,9 +71,9 @@
             this.btnServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServico.ForeColor = System.Drawing.Color.White;
-            this.btnServico.Location = new System.Drawing.Point(0, 136);
+            this.btnServico.Location = new System.Drawing.Point(0, 107);
             this.btnServico.Name = "btnServico";
-            this.btnServico.Size = new System.Drawing.Size(174, 39);
+            this.btnServico.Size = new System.Drawing.Size(174, 53);
             this.btnServico.TabIndex = 3;
             this.btnServico.Text = "Serviço";
             this.btnServico.UseVisualStyleBackColor = true;
@@ -85,9 +87,9 @@
             this.btnAnimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnimal.ForeColor = System.Drawing.Color.White;
-            this.btnAnimal.Location = new System.Drawing.Point(0, 91);
+            this.btnAnimal.Location = new System.Drawing.Point(0, 53);
             this.btnAnimal.Name = "btnAnimal";
-            this.btnAnimal.Size = new System.Drawing.Size(174, 39);
+            this.btnAnimal.Size = new System.Drawing.Size(174, 53);
             this.btnAnimal.TabIndex = 2;
             this.btnAnimal.Text = "Animal";
             this.btnAnimal.UseVisualStyleBackColor = true;
@@ -100,9 +102,9 @@
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCliente.Location = new System.Drawing.Point(0, 49);
+            this.btnCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(174, 39);
+            this.btnCliente.Size = new System.Drawing.Size(174, 53);
             this.btnCliente.TabIndex = 1;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
@@ -115,9 +117,9 @@
             this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFuncionario.ForeColor = System.Drawing.Color.White;
-            this.btnFuncionario.Location = new System.Drawing.Point(0, 10);
+            this.btnFuncionario.Location = new System.Drawing.Point(0, 218);
             this.btnFuncionario.Name = "btnFuncionario";
-            this.btnFuncionario.Size = new System.Drawing.Size(174, 39);
+            this.btnFuncionario.Size = new System.Drawing.Size(174, 53);
             this.btnFuncionario.TabIndex = 0;
             this.btnFuncionario.Text = "Funcionario";
             this.btnFuncionario.UseVisualStyleBackColor = true;
@@ -216,6 +218,21 @@
             this.pnlPrincipal.Size = new System.Drawing.Size(1122, 549);
             this.pnlPrincipal.TabIndex = 35;
             // 
+            // btnAgendamento
+            // 
+            this.btnAgendamento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgendamento.FlatAppearance.BorderSize = 0;
+            this.btnAgendamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendamento.ForeColor = System.Drawing.Color.White;
+            this.btnAgendamento.Location = new System.Drawing.Point(0, 161);
+            this.btnAgendamento.Name = "btnAgendamento";
+            this.btnAgendamento.Size = new System.Drawing.Size(174, 53);
+            this.btnAgendamento.TabIndex = 4;
+            this.btnAgendamento.Text = "Agendamento";
+            this.btnAgendamento.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,5 +273,6 @@
         private System.Windows.Forms.PictureBox picTopbar;
         private System.Windows.Forms.Panel pnlPrincipal;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnAgendamento;
     }
 }

@@ -72,5 +72,13 @@ namespace ProjetoDeAplicativos.SubForms
         {
 
         }
+
+        private void ClienteTable_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == ScrollOrientation.HorizontalScroll)
+            {
+                btnSalvar.Location = new Point((btnSalvar.Location.X + (e.NewValue - e.OldValue)), btnSalvar.Location.Y);
+            }
+        }
     }
 }

@@ -119,7 +119,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 58);
+            this.panel1.Size = new System.Drawing.Size(1281, 58);
             this.panel1.TabIndex = 3;
             // 
             // label13
@@ -371,9 +371,9 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(871, 483);
+            this.btnSalvar.Location = new System.Drawing.Point(817, 502);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(244, 42);
+            this.btnSalvar.Size = new System.Drawing.Size(189, 42);
             this.btnSalvar.TabIndex = 139;
             this.btnSalvar.Text = "Inserir Cliente";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -391,7 +391,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClienteTable";
             this.Text = "FuncionarioTable";
-            this.Load += new System.EventHandler(this.ClienteTable_Load);
+            this.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ClienteTable_Scroll);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

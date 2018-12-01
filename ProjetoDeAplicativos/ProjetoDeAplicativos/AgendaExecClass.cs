@@ -7,7 +7,7 @@ using System.Data;
 
 namespace ProjetoDeAplicativos
 {
-    class AgendaExecClass
+    public class AgendaExecClass
     {
         public string codAgendamento { get; set; }
         public string dataPrevista { get; set; }
@@ -32,7 +32,7 @@ namespace ProjetoDeAplicativos
             db.ExecutarComando($"INSERT INTO Execucao(codExecucao,dataExecucao,horaExecucao,observacoes,Animal_codAnimal,Agendamento_codAgendamento,codVeterinario) VALUES ('{codAgendamento}','{dataExecucao}','{horaExecucao}','{observacoes}','{codAnimal}','{codAgendamento}','{codVeterinario}')");
         }
 
-        public void executarAgendaExec()
+        public void editarAgendaExec()
         {
             ClasseDB db = new ClasseDB();
             db.ExecutarComando($"UPDATE Agendamento SET dataPrevista='{dataPrevista}',horaPrevista='{horaPrevista}',observacoes='{observacoes}',Animal_codAnimal='{codAnimal}',Servico_codServico='{codServico}',codVeterinario='{codVeterinario}' WHERE codAgendamento = '{codAgendamento}'");

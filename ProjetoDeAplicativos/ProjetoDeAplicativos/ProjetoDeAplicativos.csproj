@@ -115,6 +115,30 @@
     <Compile Include="SubForms\AnimalTable.Designer.cs">
       <DependentUpon>AnimalTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForms\AgendExecEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AgendExecEdit.Designer.cs">
+      <DependentUpon>AgendExecEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AgendExecInserir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AgendExecInserir.Designer.cs">
+      <DependentUpon>AgendExecInserir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AgendExecRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AgendExecRow.Designer.cs">
+      <DependentUpon>AgendExecRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AgendExecTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AgendExecTable.Designer.cs">
+      <DependentUpon>AgendExecTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForms\ServicoEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +231,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\AnimalTable.resx">
       <DependentUpon>AnimalTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AgendExecEdit.resx">
+      <DependentUpon>AgendExecEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AgendExecInserir.resx">
+      <DependentUpon>AgendExecInserir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AgendExecRow.resx">
+      <DependentUpon>AgendExecRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AgendExecTable.resx">
+      <DependentUpon>AgendExecTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\ServicoEdit.resx">
       <DependentUpon>ServicoEdit.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail; using System.Net;
 
 namespace ProjetoDeAplicativos
 {
@@ -24,6 +25,7 @@ namespace ProjetoDeAplicativos
         public Login()
         {
             InitializeComponent();
+            pnlRecuperarSenha.Hide();
         }
 
         private void picTopbar_MouseDown(object sender, MouseEventArgs e)
@@ -220,6 +222,27 @@ namespace ProjetoDeAplicativos
         private void mouseHoverC1(object sender, EventArgs e)
         {
             Cursor = Cursors.SizeNESW;
+        }
+
+        private void lnkRecuperarSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pnlRecuperarSenha.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FuncionarioClass objFunc = new FuncionarioClass();
+            DataTable tablefuncs = objFunc.retFuncionarios();
+            string senha = "";
+            for (int i = 0; i < tablefuncs.Rows.Count; i++)
+            {
+                if (tablefuncs.Rows[i]["email"].ToString() == txtRecEmail.Text)
+                {
+                    senha = tablefuncs.Rows[i]["senha"].ToString();
+                }
+            }
+
+            try             {                 var client = new SmtpClient("smtp.gmail.com", 587)                 {                     Credentials = new NetworkCredential("fabricadepapeisx@gmail.com", "adminfabrica"),                     EnableSsl = true                 };                 object a = true;                 client.SendAsync("fabricadepapeisx@gmail.com", txtRecEmail.Text, "Recuperação de senha", "Sua senha é " + senha, a);             }             catch             {                 throw;             }
         }
     }
 }

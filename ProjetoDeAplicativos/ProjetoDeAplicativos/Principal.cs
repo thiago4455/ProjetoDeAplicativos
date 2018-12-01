@@ -15,7 +15,7 @@ namespace ProjetoDeAplicativos
         int X = 0;
         int Y = 0;
 
-        int tipoServico = 0;
+        int tipoServico = 1;
 
         Button[] botoes;
 
@@ -27,14 +27,19 @@ namespace ProjetoDeAplicativos
         {
             InitializeComponent();
             Principal.funcLogado = funcLogado;
-            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal) };
-            botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico };
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal), new SubForms.AgendExecTable(pnlPrincipal)};
+            botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico, btnAgendamento};
             for (int i = 0; i < botoes.Length; i++)
             {
                 int num = i;
                 botoes[num].Click += (sender, e) => atualizar(sender, e, num);
             }
             atualizar();
+
+            if (funcLogado.codTipo!=1)
+            {
+                btnFuncionario.Hide();
+            }
         }
 
         private void picTopbar_MouseDown(object sender, MouseEventArgs e)
@@ -83,7 +88,7 @@ namespace ProjetoDeAplicativos
         public void atualizar()
         {
 
-            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal) };
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal), new SubForms.AgendExecTable(pnlPrincipal) };
             for (int i = 0; i < botoes.Length; i++)
             {
                 if (i == tipoServico)

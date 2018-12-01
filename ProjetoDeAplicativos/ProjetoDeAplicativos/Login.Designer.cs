@@ -47,6 +47,10 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pnlRecuperarSenha = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.txtRecEmail = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picTopbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPapel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSombraUsuario)).BeginInit();
@@ -57,6 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pnlRecuperarSenha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -146,6 +152,7 @@
             this.lnkRecuperarSenha.TabIndex = 22;
             this.lnkRecuperarSenha.TabStop = true;
             this.lnkRecuperarSenha.Text = "Esqueceu sua senha?";
+            this.lnkRecuperarSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkRecuperarSenha_LinkClicked);
             // 
             // btnEntrar
             // 
@@ -308,6 +315,57 @@
             this.pictureBox6.MouseLeave += new System.EventHandler(this.mouseLeave);
             this.pictureBox6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picCorner1_MouseMove);
             // 
+            // pnlRecuperarSenha
+            // 
+            this.pnlRecuperarSenha.Controls.Add(this.button1);
+            this.pnlRecuperarSenha.Controls.Add(this.txtRecEmail);
+            this.pnlRecuperarSenha.Controls.Add(this.pictureBox7);
+            this.pnlRecuperarSenha.Location = new System.Drawing.Point(178, 49);
+            this.pnlRecuperarSenha.Name = "pnlRecuperarSenha";
+            this.pnlRecuperarSenha.Size = new System.Drawing.Size(545, 456);
+            this.pnlRecuperarSenha.TabIndex = 35;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.pictureBox7.Location = new System.Drawing.Point(76, 148);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(423, 145);
+            this.pictureBox7.TabIndex = 36;
+            this.pictureBox7.TabStop = false;
+            // 
+            // txtRecEmail
+            // 
+            this.txtRecEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtRecEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRecEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.txtRecEmail.Location = new System.Drawing.Point(127, 187);
+            this.txtRecEmail.MaxLength = 50;
+            this.txtRecEmail.Name = "txtRecEmail";
+            this.txtRecEmail.Size = new System.Drawing.Size(321, 33);
+            this.txtRecEmail.TabIndex = 36;
+            this.txtRecEmail.Text = "Email";
+            this.txtRecEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(170)))), ((int)(((byte)(125)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(127, 235);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(323, 42);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Enviar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Login
             // 
             this.AcceptButton = this.btnEntrar;
@@ -315,6 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(170)))), ((int)(((byte)(125)))));
             this.ClientSize = new System.Drawing.Size(903, 541);
+            this.Controls.Add(this.pnlRecuperarSenha);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lblTitulo);
@@ -348,6 +407,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.pnlRecuperarSenha.ResumeLayout(false);
+            this.pnlRecuperarSenha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,6 +435,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel pnlRecuperarSenha;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtRecEmail;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
 
