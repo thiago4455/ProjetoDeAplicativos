@@ -144,13 +144,13 @@ if ($tableAgendaExec!=""){
                         <td class="form-group"><?php $objAgendaExec = new AgendaExecClass();
                         echo $objAgendaExec->retProxCodAgendamento(); ?></td>                            
                         <td class="form-group"><input type='date' max="<?php echo retData(); ?>" class="form-control iptDataPrevista" id="iptDataPrevista" name="iptDataPrevista" placeholder="Data Prevista"></td>
-                        <td class="form-group"><input class="form-control iptHoraPrevista" id="iptHoraPrevista" name="iptHoraPrevista" placeholder="Hora Prevista"></td>
+                        <td class="form-group"><input class="form-control iptHoraPrevista hora" id="iptHoraPrevista" name="iptHoraPrevista" placeholder="Hora Prevista"></td>
                         <td class="form-group"><input class="form-control iptObs" id="iptObs" name="iptObs" placeholder="Observações"></td>
                         <td class="form-group"><input class="form-control iptCodAnimal" id="iptCodAnimal" name="iptCodAnimal" placeholder="Cod Animal"></td>
                         <td class="form-group"><input class="form-control iptCodServico" id="iptCodServico" name="iptCodServico" placeholder="Cod Serviço"></td>
                         <td class="form-group"><input class="form-control iptCodVeterinario" id="iptCodVeterinario" name="iptCodVeterinario" placeholder="Cod Veterinário"></td>
                         <td class="form-group"><input type='date' max="<?php echo retData(); ?>" class="form-control iptDataExecucao" id="iptDataExecucao" name="iptDataExecucao" placeholder="Data Execução"></td>
-                        <td class="form-group"><input class="form-control iptHoraExecucao" id="iptHoraExecucao" name="iptHoraExecucao" placeholder="Hora Execução"></td>                                                                               
+                        <td class="form-group"><input class="form-control iptHoraExecucao hora" id="iptHoraExecucao" name="iptHoraExecucao" placeholder="Hora Execução"></td>                                                                               
                         <td class="iconesInserir"><button type="submit" value="submit request" class="fas fa-check btnIns" name="inserir"></td>
                     </form>                   
                     </tr>
@@ -337,6 +337,13 @@ if ($tableServicos!=""){
                     $('#styleTable tr').mouseleave(function() {
                         $(this).find('td.iconesEditar').removeClass('showSrv');
                     });
+                    
+                     $(function () {                        
+                                        $(".hora").mask("99:99");
 
+                                        $("input").blur(function () {
+                                         $("#info").html("Valor sem máscara: " + $(this).mask());
+                                        });
+                                    });
                 </script>
             </body>

@@ -145,7 +145,7 @@ if ($tableAnimal!=""){
                            <td class="form-group"><?php $objAnimal = new AnimalClass(); echo $objAnimal->retProxCodAnimal(); ?></td>                            
                            <td class="form-group"><input class="form-control iptCliente_codCliente" id="iptCliente_codCliente" name="iptCliente_codCliente" placeholder="Código Cliente"></td>                                     
                            <td class="form-group"><input class="form-control iptNome" id="iptNome" name="iptNome" placeholder="Nome"></td>                                     
-                           <td class="form-group"><input class="form-control iptAnoNascimento" id="iptAnoNascimento" name="iptAnoNascimento" placeholder="Ano Nascimento"></td>                              
+                           <td class="form-group"><input class="form-control iptAnoNascimento data" id="iptAnoNascimento" name="iptAnoNascimento" placeholder="Ano Nascimento"></td>                              
                            <td class="form-group"><input class="form-control iptPeso" id="iptPeso" name="iptPeso" placeholder="Peso"></td>                           
                            <td class="form-group"><input class="form-control iptGrupo" id="iptGrupo" name="iptGrupo" placeholder="Grupo"></td>                                                  
                            <td class="form-group"><input class="form-control iptRaca" id="iptRaca" name="iptRaca" placeholder="Raça"></td>                           
@@ -220,6 +220,13 @@ if ($tableAnimal!=""){
                     $('#styleTable tr').mouseleave(function() {
                         $(this).find('td.iconesEditar').removeClass('show');
                     });
-
+                    
+                    $(function () {                        
+                        $(".data").mask("9999");
+       
+                        $("input").blur(function () {
+                         $("#info").html("Valor sem máscara: " + $(this).mask());
+                        });
+                    });
                 </script>
             </body>
