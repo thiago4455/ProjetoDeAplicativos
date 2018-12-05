@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.linhaBusca = new System.Windows.Forms.PictureBox();
-            this.dataNasc = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nome = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -37,9 +36,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.senha = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.rg = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.telefone = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.endereco = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -48,11 +45,18 @@
             this.cidade = new System.Windows.Forms.TextBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pais = new System.Windows.Forms.TextBox();
-            this.tipo = new System.Windows.Forms.CheckBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.estado = new System.Windows.Forms.TextBox();
+            this.rg = new System.Windows.Forms.MaskedTextBox();
+            this.telefone = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.tipo = new System.Windows.Forms.TextBox();
+            this.dataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.linhaBusca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // linhaBusca
@@ -72,23 +77,9 @@
             this.linhaBusca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
             this.linhaBusca.Location = new System.Drawing.Point(98, 85);
             this.linhaBusca.Name = "linhaBusca";
-            this.linhaBusca.Size = new System.Drawing.Size(179, 2);
+            this.linhaBusca.Size = new System.Drawing.Size(99, 2);
             this.linhaBusca.TabIndex = 116;
             this.linhaBusca.TabStop = false;
-            // 
-            // dataNasc
-            // 
-            this.dataNasc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataNasc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.dataNasc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataNasc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.dataNasc.Location = new System.Drawing.Point(98, 55);
-            this.dataNasc.MaxLength = 50;
-            this.dataNasc.Name = "dataNasc";
-            this.dataNasc.Size = new System.Drawing.Size(179, 22);
-            this.dataNasc.TabIndex = 115;
-            this.dataNasc.Text = "Data de Nascimento";
             // 
             // pictureBox1
             // 
@@ -172,20 +163,6 @@
             this.pictureBox4.TabIndex = 124;
             this.pictureBox4.TabStop = false;
             // 
-            // rg
-            // 
-            this.rg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.rg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.rg.Location = new System.Drawing.Point(98, 248);
-            this.rg.MaxLength = 50;
-            this.rg.Name = "rg";
-            this.rg.Size = new System.Drawing.Size(377, 22);
-            this.rg.TabIndex = 123;
-            this.rg.Text = "RG";
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -195,20 +172,6 @@
             this.pictureBox5.Size = new System.Drawing.Size(377, 2);
             this.pictureBox5.TabIndex = 126;
             this.pictureBox5.TabStop = false;
-            // 
-            // telefone
-            // 
-            this.telefone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.telefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.telefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.telefone.Location = new System.Drawing.Point(98, 297);
-            this.telefone.MaxLength = 50;
-            this.telefone.Name = "telefone";
-            this.telefone.Size = new System.Drawing.Size(377, 22);
-            this.telefone.TabIndex = 125;
-            this.telefone.Text = "Telefone";
             // 
             // pictureBox6
             // 
@@ -306,19 +269,6 @@
             this.pais.TabIndex = 133;
             this.pais.Text = "País";
             // 
-            // tipo
-            // 
-            this.tipo.AutoSize = true;
-            this.tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.tipo.Location = new System.Drawing.Point(634, 296);
-            this.tipo.Name = "tipo";
-            this.tipo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tipo.Size = new System.Drawing.Size(145, 28);
-            this.tipo.TabIndex = 136;
-            this.tipo.Text = "Administrador";
-            this.tipo.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -377,16 +327,118 @@
             this.estado.TabIndex = 140;
             this.estado.Text = "Estado";
             // 
+            // rg
+            // 
+            this.rg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.rg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.rg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.rg.Location = new System.Drawing.Point(98, 248);
+            this.rg.Mask = "aa.99-999-999";
+            this.rg.Name = "rg";
+            this.rg.Size = new System.Drawing.Size(377, 22);
+            this.rg.TabIndex = 142;
+            // 
+            // telefone
+            // 
+            this.telefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.telefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.telefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.telefone.Location = new System.Drawing.Point(98, 302);
+            this.telefone.Mask = "(99) 0000-0000";
+            this.telefone.Name = "telefone";
+            this.telefone.Size = new System.Drawing.Size(377, 22);
+            this.telefone.TabIndex = 143;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.pictureBox11.Location = new System.Drawing.Point(634, 332);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(117, 2);
+            this.pictureBox11.TabIndex = 145;
+            this.pictureBox11.TabStop = false;
+            // 
+            // tipo
+            // 
+            this.tipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.tipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.tipo.Location = new System.Drawing.Point(634, 302);
+            this.tipo.MaxLength = 50;
+            this.tipo.Name = "tipo";
+            this.tipo.Size = new System.Drawing.Size(117, 22);
+            this.tipo.TabIndex = 144;
+            this.tipo.Text = "Tipo";
+            // 
+            // dataNasc
+            // 
+            this.dataNasc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.dataNasc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.dataNasc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.dataNasc.Location = new System.Drawing.Point(98, 57);
+            this.dataNasc.Mask = "00/00/0000";
+            this.dataNasc.Name = "dataNasc";
+            this.dataNasc.Size = new System.Drawing.Size(99, 22);
+            this.dataNasc.TabIndex = 146;
+            this.dataNasc.ValidatingType = typeof(System.DateTime);
+            this.dataNasc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.label1.Location = new System.Drawing.Point(95, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 18);
+            this.label1.TabIndex = 147;
+            this.label1.Text = "Data Nascimento";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.label2.Location = new System.Drawing.Point(95, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 18);
+            this.label2.TabIndex = 148;
+            this.label2.Text = "RG";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.label3.Location = new System.Drawing.Point(95, 281);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 18);
+            this.label3.TabIndex = 149;
+            this.label3.Text = "Telefone";
+            // 
             // FuncionarioInserir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 545);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataNasc);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.tipo);
+            this.Controls.Add(this.telefone);
+            this.Controls.Add(this.rg);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.estado);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.tipo);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pais);
             this.Controls.Add(this.pictureBox8);
@@ -396,9 +448,7 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.endereco);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.telefone);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.rg);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.senha);
             this.Controls.Add(this.pictureBox2);
@@ -406,10 +456,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nome);
             this.Controls.Add(this.linhaBusca);
-            this.Controls.Add(this.dataNasc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FuncionarioInserir";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.FuncionarioInserir_Load);
             ((System.ComponentModel.ISupportInitialize)(this.linhaBusca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -421,6 +471,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,7 +480,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox linhaBusca;
-        private System.Windows.Forms.TextBox dataNasc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox nome;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -437,9 +487,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox senha;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox rg;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox telefone;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox endereco;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -448,10 +496,17 @@
         private System.Windows.Forms.TextBox cidade;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TextBox pais;
-        private System.Windows.Forms.CheckBox tipo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.TextBox estado;
+        private System.Windows.Forms.MaskedTextBox rg;
+        private System.Windows.Forms.MaskedTextBox telefone;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.TextBox tipo;
+        private System.Windows.Forms.MaskedTextBox dataNasc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

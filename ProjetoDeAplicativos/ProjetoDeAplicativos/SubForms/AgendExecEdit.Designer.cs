@@ -31,9 +31,6 @@
             this.linhaBusca = new System.Windows.Forms.PictureBox();
             this.codAgendamento = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataPrevista = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.horaPrevista = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.observacoes = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -43,21 +40,28 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.codVeterinario = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.dataExecucao = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.horaExecucao = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataPrevista = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataExecucao = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.horaExecucao = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.horaPrevista = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.linhaBusca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // linhaBusca
@@ -90,47 +94,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
             this.pictureBox1.Location = new System.Drawing.Point(98, 133);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 2);
             this.pictureBox1.TabIndex = 118;
             this.pictureBox1.TabStop = false;
-            // 
-            // dataPrevista
-            // 
-            this.dataPrevista.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataPrevista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.dataPrevista.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataPrevista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataPrevista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.dataPrevista.Location = new System.Drawing.Point(98, 103);
-            this.dataPrevista.MaxLength = 50;
-            this.dataPrevista.Name = "dataPrevista";
-            this.dataPrevista.Size = new System.Drawing.Size(377, 22);
-            this.dataPrevista.TabIndex = 117;
-            this.dataPrevista.Text = "Data Prevista";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox2.Location = new System.Drawing.Point(98, 182);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(377, 2);
-            this.pictureBox2.TabIndex = 120;
-            this.pictureBox2.TabStop = false;
-            // 
-            // horaPrevista
-            // 
-            this.horaPrevista.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.horaPrevista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.horaPrevista.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.horaPrevista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horaPrevista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.horaPrevista.Location = new System.Drawing.Point(98, 152);
-            this.horaPrevista.MaxLength = 50;
-            this.horaPrevista.Name = "horaPrevista";
-            this.horaPrevista.Size = new System.Drawing.Size(377, 22);
-            this.horaPrevista.TabIndex = 119;
-            this.horaPrevista.Text = "Hora Prevista";
             // 
             // pictureBox3
             // 
@@ -234,23 +200,9 @@
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
             this.pictureBox7.Location = new System.Drawing.Point(730, 133);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(377, 2);
+            this.pictureBox7.Size = new System.Drawing.Size(93, 2);
             this.pictureBox7.TabIndex = 130;
             this.pictureBox7.TabStop = false;
-            // 
-            // dataExecucao
-            // 
-            this.dataExecucao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataExecucao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.dataExecucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataExecucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataExecucao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.dataExecucao.Location = new System.Drawing.Point(730, 103);
-            this.dataExecucao.MaxLength = 50;
-            this.dataExecucao.Name = "dataExecucao";
-            this.dataExecucao.Size = new System.Drawing.Size(377, 22);
-            this.dataExecucao.TabIndex = 129;
-            this.dataExecucao.Text = "Data Execução";
             // 
             // pictureBox8
             // 
@@ -258,23 +210,9 @@
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
             this.pictureBox8.Location = new System.Drawing.Point(730, 182);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(377, 2);
+            this.pictureBox8.Size = new System.Drawing.Size(93, 2);
             this.pictureBox8.TabIndex = 132;
             this.pictureBox8.TabStop = false;
-            // 
-            // horaExecucao
-            // 
-            this.horaExecucao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.horaExecucao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.horaExecucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.horaExecucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horaExecucao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.horaExecucao.Location = new System.Drawing.Point(730, 152);
-            this.horaExecucao.MaxLength = 50;
-            this.horaExecucao.Name = "horaExecucao";
-            this.horaExecucao.Size = new System.Drawing.Size(377, 22);
-            this.horaExecucao.TabIndex = 131;
-            this.horaExecucao.Text = "Hora Execução";
             // 
             // btnCancelar
             // 
@@ -327,18 +265,131 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.label1.Location = new System.Drawing.Point(95, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 18);
+            this.label1.TabIndex = 176;
+            this.label1.Text = "Data Prevista";
+            // 
+            // dataPrevista
+            // 
+            this.dataPrevista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.dataPrevista.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataPrevista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.dataPrevista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.dataPrevista.Location = new System.Drawing.Point(98, 108);
+            this.dataPrevista.Mask = "00/00/0000";
+            this.dataPrevista.Name = "dataPrevista";
+            this.dataPrevista.Size = new System.Drawing.Size(99, 22);
+            this.dataPrevista.TabIndex = 175;
+            this.dataPrevista.ValidatingType = typeof(System.DateTime);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.label2.Location = new System.Drawing.Point(727, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 18);
+            this.label2.TabIndex = 178;
+            this.label2.Text = "Data Execução";
+            // 
+            // dataExecucao
+            // 
+            this.dataExecucao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.dataExecucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataExecucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.dataExecucao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.dataExecucao.Location = new System.Drawing.Point(730, 109);
+            this.dataExecucao.Mask = "00/00/0000";
+            this.dataExecucao.Name = "dataExecucao";
+            this.dataExecucao.Size = new System.Drawing.Size(99, 22);
+            this.dataExecucao.TabIndex = 177;
+            this.dataExecucao.ValidatingType = typeof(System.DateTime);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.label3.Location = new System.Drawing.Point(727, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.TabIndex = 180;
+            this.label3.Text = "Hora Execução";
+            // 
+            // horaExecucao
+            // 
+            this.horaExecucao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.horaExecucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.horaExecucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.horaExecucao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.horaExecucao.Location = new System.Drawing.Point(730, 156);
+            this.horaExecucao.Mask = "00:00";
+            this.horaExecucao.Name = "horaExecucao";
+            this.horaExecucao.Size = new System.Drawing.Size(99, 22);
+            this.horaExecucao.TabIndex = 179;
+            this.horaExecucao.ValidatingType = typeof(System.DateTime);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.label4.Location = new System.Drawing.Point(95, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 18);
+            this.label4.TabIndex = 183;
+            this.label4.Text = "Hora Prevista";
+            // 
+            // horaPrevista
+            // 
+            this.horaPrevista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.horaPrevista.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.horaPrevista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.horaPrevista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.horaPrevista.Location = new System.Drawing.Point(98, 162);
+            this.horaPrevista.Mask = "00:00";
+            this.horaPrevista.Name = "horaPrevista";
+            this.horaPrevista.Size = new System.Drawing.Size(99, 22);
+            this.horaPrevista.TabIndex = 182;
+            this.horaPrevista.ValidatingType = typeof(System.DateTime);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.pictureBox2.Location = new System.Drawing.Point(98, 188);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(93, 2);
+            this.pictureBox2.TabIndex = 181;
+            this.pictureBox2.TabStop = false;
+            // 
             // AgendExecEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 545);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.horaPrevista);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.horaExecucao);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataExecucao);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataPrevista);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.horaExecucao);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.dataExecucao);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.codVeterinario);
             this.Controls.Add(this.pictureBox5);
@@ -347,10 +398,7 @@
             this.Controls.Add(this.codAnimal);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.observacoes);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.horaPrevista);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataPrevista);
             this.Controls.Add(this.linhaBusca);
             this.Controls.Add(this.codAgendamento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -358,13 +406,13 @@
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.linhaBusca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,9 +423,6 @@
         private System.Windows.Forms.PictureBox linhaBusca;
         private System.Windows.Forms.TextBox codAgendamento;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox dataPrevista;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox horaPrevista;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox observacoes;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -387,11 +432,18 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox codVeterinario;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox dataExecucao;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.TextBox horaExecucao;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox dataPrevista;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox dataExecucao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox horaExecucao;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox horaPrevista;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -45,7 +45,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox1.Location = new System.Drawing.Point(112, 83);
+            this.pictureBox1.Location = new System.Drawing.Point(112, 169);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(377, 2);
             this.pictureBox1.TabIndex = 118;
@@ -58,7 +58,7 @@
             this.nome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.nome.Location = new System.Drawing.Point(112, 53);
+            this.nome.Location = new System.Drawing.Point(112, 139);
             this.nome.MaxLength = 50;
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(377, 22);
@@ -69,7 +69,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox2.Location = new System.Drawing.Point(112, 132);
+            this.pictureBox2.Location = new System.Drawing.Point(112, 218);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(377, 2);
             this.pictureBox2.TabIndex = 120;
@@ -82,7 +82,7 @@
             this.descricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.descricao.Location = new System.Drawing.Point(112, 102);
+            this.descricao.Location = new System.Drawing.Point(112, 188);
             this.descricao.MaxLength = 50;
             this.descricao.Name = "descricao";
             this.descricao.Size = new System.Drawing.Size(377, 22);
@@ -93,7 +93,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.pictureBox3.Location = new System.Drawing.Point(112, 180);
+            this.pictureBox3.Location = new System.Drawing.Point(112, 266);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(377, 2);
             this.pictureBox3.TabIndex = 122;
@@ -106,7 +106,7 @@
             this.valor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.valor.Location = new System.Drawing.Point(112, 150);
+            this.valor.Location = new System.Drawing.Point(112, 236);
             this.valor.MaxLength = 50;
             this.valor.Name = "valor";
             this.valor.Size = new System.Drawing.Size(377, 22);

@@ -33,10 +33,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.descricao = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.valor = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.valor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -100,20 +100,6 @@
             this.pictureBox4.TabIndex = 124;
             this.pictureBox4.TabStop = false;
             // 
-            // valor
-            // 
-            this.valor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.valor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.valor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
-            this.valor.Location = new System.Drawing.Point(98, 248);
-            this.valor.MaxLength = 50;
-            this.valor.Name = "valor";
-            this.valor.Size = new System.Drawing.Size(377, 22);
-            this.valor.TabIndex = 123;
-            this.valor.Text = "Valor";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -165,6 +151,20 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // valor
+            // 
+            this.valor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.valor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.valor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(119)))), ((int)(((byte)(134)))));
+            this.valor.Location = new System.Drawing.Point(98, 248);
+            this.valor.MaxLength = 50;
+            this.valor.Name = "valor";
+            this.valor.Size = new System.Drawing.Size(377, 22);
+            this.valor.TabIndex = 123;
+            this.valor.Text = "Valor";
+            // 
             // ServicoEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,9 +196,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox descricao;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox valor;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox valor;
     }
 }

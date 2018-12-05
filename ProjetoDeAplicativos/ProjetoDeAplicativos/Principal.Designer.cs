@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.painelNavBar = new System.Windows.Forms.Panel();
+            this.btnAgendamento = new System.Windows.Forms.Button();
             this.btnServico = new System.Windows.Forms.Button();
             this.btnAnimal = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.picTopbar = new System.Windows.Forms.PictureBox();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnAgendamento = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             this.painelNavBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTopbar)).BeginInit();
@@ -53,6 +54,7 @@
             this.painelNavBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.painelNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(170)))), ((int)(((byte)(125)))));
+            this.painelNavBar.Controls.Add(this.btnRelatorio);
             this.painelNavBar.Controls.Add(this.btnAgendamento);
             this.painelNavBar.Controls.Add(this.btnServico);
             this.painelNavBar.Controls.Add(this.btnAnimal);
@@ -62,6 +64,21 @@
             this.painelNavBar.Name = "painelNavBar";
             this.painelNavBar.Size = new System.Drawing.Size(174, 554);
             this.painelNavBar.TabIndex = 0;
+            // 
+            // btnAgendamento
+            // 
+            this.btnAgendamento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgendamento.FlatAppearance.BorderSize = 0;
+            this.btnAgendamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgendamento.ForeColor = System.Drawing.Color.White;
+            this.btnAgendamento.Location = new System.Drawing.Point(0, 161);
+            this.btnAgendamento.Name = "btnAgendamento";
+            this.btnAgendamento.Size = new System.Drawing.Size(174, 53);
+            this.btnAgendamento.TabIndex = 4;
+            this.btnAgendamento.Text = "Agendamento";
+            this.btnAgendamento.UseVisualStyleBackColor = true;
             // 
             // btnServico
             // 
@@ -218,20 +235,20 @@
             this.pnlPrincipal.Size = new System.Drawing.Size(1122, 549);
             this.pnlPrincipal.TabIndex = 35;
             // 
-            // btnAgendamento
+            // btnRelatorio
             // 
-            this.btnAgendamento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnRelatorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgendamento.FlatAppearance.BorderSize = 0;
-            this.btnAgendamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgendamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgendamento.ForeColor = System.Drawing.Color.White;
-            this.btnAgendamento.Location = new System.Drawing.Point(0, 161);
-            this.btnAgendamento.Name = "btnAgendamento";
-            this.btnAgendamento.Size = new System.Drawing.Size(174, 53);
-            this.btnAgendamento.TabIndex = 4;
-            this.btnAgendamento.Text = "Agendamento";
-            this.btnAgendamento.UseVisualStyleBackColor = true;
+            this.btnRelatorio.FlatAppearance.BorderSize = 0;
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 501);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(174, 53);
+            this.btnRelatorio.TabIndex = 5;
+            this.btnRelatorio.Text = "Relatórios";
+            this.btnRelatorio.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
@@ -274,5 +291,6 @@
         private System.Windows.Forms.Panel pnlPrincipal;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnAgendamento;
+        private System.Windows.Forms.Button btnRelatorio;
     }
 }

@@ -27,8 +27,8 @@ namespace ProjetoDeAplicativos
         {
             InitializeComponent();
             Principal.funcLogado = funcLogado;
-            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal), new SubForms.AgendExecTable(pnlPrincipal)};
-            botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico, btnAgendamento};
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal), new SubForms.AgendExecTable(pnlPrincipal), new SubForms.Relatorios() };
+            botoes = new Button[] { btnFuncionario, btnCliente, btnAnimal, btnServico, btnAgendamento, btnRelatorio};
             for (int i = 0; i < botoes.Length; i++)
             {
                 int num = i;
@@ -88,7 +88,7 @@ namespace ProjetoDeAplicativos
         public void atualizar()
         {
 
-            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal), new SubForms.AgendExecTable(pnlPrincipal) };
+            objForm = new Form[] { new SubForms.FuncionarioTable(pnlPrincipal), new SubForms.ClienteTable(pnlPrincipal), new SubForms.AnimalTable(pnlPrincipal), new SubForms.ServicoTable(pnlPrincipal), new SubForms.AgendExecTable(pnlPrincipal), new SubForms.Relatorios() };
             for (int i = 0; i < botoes.Length; i++)
             {
                 if (i == tipoServico)

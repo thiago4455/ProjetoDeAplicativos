@@ -30,7 +30,7 @@ namespace ProjetoDeAplicativos.SubForms
             cidade.Text = func.cidade;
             estado.Text = func.estado;
             pais.Text = func.pais;
-            tipo.Checked = func.codTipo==1;
+            tipo.Text = func.codTipo.ToString();
             painel = pnl;
         }
 
@@ -47,7 +47,7 @@ namespace ProjetoDeAplicativos.SubForms
             funcionario.cidade = cidade.Text;
             funcionario.estado = estado.Text;
             funcionario.pais = pais.Text;
-            funcionario.codTipo = tipo.Checked?1:0;
+            funcionario.codTipo = int.Parse(tipo.Text);
             funcionario.editarFuncionario();
             sair();
         }

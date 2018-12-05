@@ -36,7 +36,7 @@ namespace ProjetoDeAplicativos.SubForms
             funcionario.cidade = cidade.Text;
             funcionario.estado = estado.Text;
             funcionario.pais = pais.Text;
-            funcionario.codTipo = tipo.Checked?1:0;
+            funcionario.codTipo = int.Parse(tipo.Text);
             funcionario.inserirFuncionario();
             sair();
         }
@@ -54,6 +54,16 @@ namespace ProjetoDeAplicativos.SubForms
             painel.Controls.Add(objForm);
             objForm.Dock = DockStyle.Fill;
             objForm.Show();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void FuncionarioInserir_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
